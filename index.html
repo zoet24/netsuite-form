@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+   <head>
+      <title>OB/Netsuite Form</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="index.css" />
+   </head>
+   <body>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 mx-auto mt-5">
+                <form name="OB-form">
+                    <label for="initial-reason">Please tell us why you're registering</label>
+                        <select name="initial-reason" id="initial-reason" onchange="initialReason()">
+                            <option></option>
+                            <option name="initial-reason" value="initial-reason-1">Registering interest on behalf of someone with ULD </option>
+                            <option name="initial-reason" value="initial-reason-2">I have an ULD</option>
+                            <option name="initial-reason" value="initial-reason-3">Interested in tech innovation</option>
+                        </select>
+                    <fieldset class="hidden" id="initial-reason-1">
+                        <legend>Please complete the short form below:</legend>
+                        <label for="first-name-refer">First name (referrer):</label>
+                        <input type="text" id="first-name-refer" name="first-name-refer"><br>
+                        <label for="second-name-refer">Last name (referrer):</label>
+                        <input type="text" id="second-name-refer" name="second-name-refer"><br>
+                    </fieldset>
+                    <fieldset class="hidden"  id="initial-reason-2">
+                        <legend>Please complete the short form below:</legend>
+                        <label for="first-name-user">First name (user):</label>
+                        <input type="text" id="first-name-user" name="first-name-user"><br>
+                        <label for="second-name-user">Last name (user):</label>
+                        <input type="text" id="second-name-user" name="second-name-user"><br>
+                    </fieldset>
+                    <fieldset class="hidden" id="initial-reason-3">
+                        <legend>Please complete the short form below:</legend>
+                        <label for="first-name-interest">First name (interested):</label>
+                        <input type="text" id="first-name-interest" name="first-name-interest"><br>
+                        <label for="second-name-interest">Last name (interested):</label>
+                        <input type="text" id="second-name-interest" name="second-name-interest"><br>
+                    </fieldset>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+      </div>  
+      <!--Link to Bootstrap CDN-->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--Link to JQuery CDN-->
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <!--Link to script index.js-->
+      <script src="index.js"></script>
+   </body>
+</html>
