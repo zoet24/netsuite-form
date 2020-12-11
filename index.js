@@ -4,6 +4,7 @@ function initialReason() {
     if (x == "reason-blank") {
         document.getElementById("form-field-1").innerHTML = "";
         document.getElementById("form-field-2").innerHTML = "";
+        $("#form-field-3").addClass("hidden");
     }
     if (x == "reason-behalf") {
         document.getElementById("form-field-1").innerHTML = `
@@ -59,6 +60,7 @@ function initialReason() {
             <label for="custentity_ob_userresiduallengthfreetext">What is the distance between their elbow crease and end of their residual limb?</label>
             <input type="text" id="custentity_ob_userresiduallengthfreetext" name="custentity_ob_userresiduallengthfreetext"><br>
         `;
+        $("#form-field-3").removeClass("hidden");
     }
     if (x == "reason-uld") {
         document.getElementById("form-field-1").innerHTML = `
@@ -356,10 +358,12 @@ function initialReason() {
             <label for="custentity_ob_userresiduallengthcm">What is the distance between your elbow crease and end of your residual limb?</label>
             <input type="text" id="custentity_ob_userresiduallengthcm" name="custentity_ob_userresiduallengthcm"><br>
         `;
+        $("#form-field-3").removeClass("hidden");
     }
     if (x == "reason-tech") {
-        document.getElementById("form-field-1").innerHTML = "Interested tech form";
+        document.getElementById("form-field-1").innerHTML = "Interested in tech form";
         document.getElementById("form-field-2").innerHTML = "";
+        $("#form-field-3").removeClass("hidden");
     }
 }
 
