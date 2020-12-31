@@ -280,10 +280,112 @@
                   </select>
                </div>
                <div id="form-field-1">
-                  
+                  <legend>Please complete the short form below:</legend>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerfirstname">First name:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="custentity_ob_referrerfirstname" name="custentity_ob_referrerfirstname" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerlastname">Last name:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="custentity_ob_referrerlastname" name="custentity_ob_referrerlastname" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referreremail">Email address:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="custentity_ob_referreremail" id="custentity_ob_referreremail" name="email" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerphone">
+                        Phone number:
+                        <span class="form-field__required">*</span>
+                        <span class="form-field__icon" data-balloon="We will only get in touch by phone if we are having difficulties reaching you by email." data-balloon-pos="up">
+                           <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.875 0a7.875 7.875 0 1 0 0 15.75 7.875 7.875 0 0 0 0-15.75zm1.639 12.205c-.405.16-.728.281-.97.365a2.559 2.559 0 0 1-.841.126c-.491 0-.873-.12-1.145-.36a1.16 1.16 0 0 1-.407-.91c0-.144.01-.29.03-.44.02-.15.053-.317.098-.506l.507-1.792a9.19 9.19 0 0 0 .114-.487 2.16 2.16 0 0 0 .045-.422c0-.228-.047-.388-.141-.478-.095-.09-.275-.134-.542-.134-.13 0-.265.019-.403.06a5.73 5.73 0 0 0-.353.117l.134-.552c.332-.135.65-.251.953-.347.304-.098.59-.146.86-.146.488 0 .864.119 1.128.354.264.235.396.541.396.917 0 .078-.009.215-.027.411a2.752 2.752 0 0 1-.101.541l-.505 1.787a5.055 5.055 0 0 0-.111.49 2.595 2.595 0 0 0-.049.418c0 .237.053.399.16.485.105.086.29.13.55.13a1.6 1.6 0 0 0 .418-.065c.155-.043.267-.081.337-.114l-.135.552zm-.09-7.252a1.204 1.204 0 0 1-.85.328c-.33 0-.615-.11-.853-.328a1.047 1.047 0 0 1-.355-.796c0-.31.12-.576.355-.797.238-.221.523-.331.854-.331.331 0 .615.11.85.331.235.22.353.487.353.797 0 .312-.118.577-.353.796z" fill="#0084C8" fill-rule="nonzero"></path>
+                           </svg>
+                        </span>
+                     </label>
+                     <input class="input" type="tel" id="custentity_ob_referrerphone" name="custentity_ob_referrerphone" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerzip">Post code/Zip code:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="custentity_ob_referrerzip" name="custentity_ob_referrerzip" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerstateorcountry">State or Country:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="custentity_ob_referrerstateorcountry" name="custentity_ob_referrerstateorcountry"><br>
+                  </div>
+                  <br>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referraltype">I am applying on behalf of:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <select class="input" id="custentity_ob_referraltype" name="custentity_ob_referraltype" required>
+                        <option></option>
+                        <option value="child">My child</option>
+                        <option value="relative">My relative</option>
+                        <option value="friend">My friend</option>
+                        <option value="other">Someone else</option>
+                     </select>
+                     <br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="firstname">Their first name:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="firstname" name="firstname" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="lastname">Their last name:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="lastname" name="lastname" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_userdateofbirth">Their date of birth:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="date" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth" required><br>
+                  </div>
+                  <br>
                </div>
                <div id="form-field-2">
-                  
+                  <div class="form-field">
+                     <label for="custentity_ob_userchirality">What side is their limb difference?</label>
+                     <select class="input" name="custentity_ob_userchirality" id="custentity_ob_userchirality">
+                        <option></option>
+                        <option name="custentity_ob_userchirality" value="left">Left</option>
+                        <option name="custentity_ob_userchirality" value="right">Right</option>
+                        <option name="custentity_ob_userchirality" value="both">Both</option>
+                     </select>
+                     <br>
+                  </div>
+                  <div class="form-field">
+                     <label for="custentity_ob_userlimbdifference">What is the nature of their upper limb difference?</label>
+                     <select class="input" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" onchange="aboveElbow()">
+                        <option></option>
+                        <option name="custentity_ob_userlimbdifference" value="below-elbow">Below elbow</option>
+                        <option name="custentity_ob_userlimbdifference" value="unsure">Unsure</option>
+                        <option name="custentity_ob_userlimbdifference" value="partial-hand">Partial hand</option>
+                        <option name="custentity_ob_userlimbdifference" value="above-elbow">Above elbow</option>
+                     </select>
+                     <br>
+                     <div class="hidden" id="above-elbow-disclaimer">
+                        <p>The Hero Arm is our first product, and is only available for people with below elbow differences. Please register your interest anyway and we'll get in touch if we develop prostheses for above elbow and partial hand.</p>
+                     </div>
+                  </div>
+                  <div class="form-field">
+                     <label for="custentity_ob_userresiduallengthfreetext">What is the distance between their elbow crease and end of their residual limb?</label>
+                     <input class="input" type="text" id="custentity_ob_userresiduallengthfreetext" name="custentity_ob_userresiduallengthfreetext"><br>
+                  </div>
                </div>
                <div id="form-field-3" class="hidden">
                   <div class="form-field">
@@ -526,234 +628,8 @@
                 document.getElementById("form-field-2").innerHTML = "";
                 $("#form-field-3").addClass("hidden");
             }
-            if (x == "reason-behalf") {
-                document.getElementById("form-field-1").innerHTML = `
-                  <legend>Please complete the short form below:</legend>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_referrerfirstname">First name:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="custentity_ob_referrerfirstname" name="custentity_ob_referrerfirstname" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_referrerlastname">Last name:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="custentity_ob_referrerlastname" name="custentity_ob_referrerlastname" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_referreremail">Email address:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="custentity_ob_referreremail" id="custentity_ob_referreremail" name="email" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_referrerphone">
-                        Phone number:
-                        <span class="form-field__required">*</span>
-                        <span class="form-field__icon" data-balloon="We will only get in touch by phone if we are having difficulties reaching you by email." data-balloon-pos="up">
-                           <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M7.875 0a7.875 7.875 0 1 0 0 15.75 7.875 7.875 0 0 0 0-15.75zm1.639 12.205c-.405.16-.728.281-.97.365a2.559 2.559 0 0 1-.841.126c-.491 0-.873-.12-1.145-.36a1.16 1.16 0 0 1-.407-.91c0-.144.01-.29.03-.44.02-.15.053-.317.098-.506l.507-1.792a9.19 9.19 0 0 0 .114-.487 2.16 2.16 0 0 0 .045-.422c0-.228-.047-.388-.141-.478-.095-.09-.275-.134-.542-.134-.13 0-.265.019-.403.06a5.73 5.73 0 0 0-.353.117l.134-.552c.332-.135.65-.251.953-.347.304-.098.59-.146.86-.146.488 0 .864.119 1.128.354.264.235.396.541.396.917 0 .078-.009.215-.027.411a2.752 2.752 0 0 1-.101.541l-.505 1.787a5.055 5.055 0 0 0-.111.49 2.595 2.595 0 0 0-.049.418c0 .237.053.399.16.485.105.086.29.13.55.13a1.6 1.6 0 0 0 .418-.065c.155-.043.267-.081.337-.114l-.135.552zm-.09-7.252a1.204 1.204 0 0 1-.85.328c-.33 0-.615-.11-.853-.328a1.047 1.047 0 0 1-.355-.796c0-.31.12-.576.355-.797.238-.221.523-.331.854-.331.331 0 .615.11.85.331.235.22.353.487.353.797 0 .312-.118.577-.353.796z" fill="#0084C8" fill-rule="nonzero"></path>
-                           </svg>
-                        </span>
-                     </label>
-                     <input class="input" type="tel" id="custentity_ob_referrerphone" name="custentity_ob_referrerphone" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_referrerzip">Post code/Zip code:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="custentity_ob_referrerzip" name="custentity_ob_referrerzip" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_referrerstateorcountry">State or Country:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="custentity_ob_referrerstateorcountry" name="custentity_ob_referrerstateorcountry"><br>
-                  </div>
-                  <br>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_referraltype">I am applying on behalf of:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <select class="input" id="custentity_ob_referraltype" name="custentity_ob_referraltype" required>
-                        <option></option>
-                        <option value="child">My child</option>
-                        <option value="relative">My relative</option>
-                        <option value="friend">My friend</option>
-                        <option value="other">Someone else</option>
-                     </select>
-                     <br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="firstname">Their first name:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="firstname" name="firstname" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="lastname">Their last name:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="lastname" name="lastname" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_userdateofbirth">Their date of birth:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="date" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth" required><br>
-                  </div>
-                `;
-                document.getElementById("form-field-2").innerHTML = `
-                  <div class="form-field">
-                     <label for="custentity_ob_userchirality">What side is their limb difference?</label>
-                     <select class="input" name="custentity_ob_userchirality" id="custentity_ob_userchirality">
-                        <option></option>
-                        <option name="custentity_ob_userchirality" value="left">Left</option>
-                        <option name="custentity_ob_userchirality" value="right">Right</option>
-                        <option name="custentity_ob_userchirality" value="both">Both</option>
-                     </select>
-                     <br>
-                  </div>
-                  <div class="form-field">
-                     <label for="custentity_ob_userlimbdifference">What is the nature of their upper limb difference?</label>
-                     <select class="input" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" onchange="aboveElbow()">
-                        <option></option>
-                        <option name="custentity_ob_userlimbdifference" value="below-elbow">Below elbow</option>
-                        <option name="custentity_ob_userlimbdifference" value="unsure">Unsure</option>
-                        <option name="custentity_ob_userlimbdifference" value="partial-hand">Partial hand</option>
-                        <option name="custentity_ob_userlimbdifference" value="above-elbow">Above elbow</option>
-                     </select>
-                     <br>
-                     <div class="hidden" id="above-elbow-disclaimer">
-                        <p>The Hero Arm is our first product, and is only available for people with below elbow differences. Please register your interest anyway and we'll get in touch if we develop prostheses for above elbow and partial hand.</p>
-                     </div>
-                  </div>
-                  <div class="form-field">
-                     <label for="custentity_ob_userresiduallengthfreetext">What is the distance between their elbow crease and end of their residual limb?</label>
-                     <input class="input" type="text" id="custentity_ob_userresiduallengthfreetext" name="custentity_ob_userresiduallengthfreetext"><br>
-                  </div>
-                `;
-                $("#form-field-3").removeClass("hidden");
-            }
-            if (x == "reason-uld") {
-                document.getElementById("form-field-1").innerHTML = `
-                  <legend>Please complete the short form below:</legend>
-                  <div class="form-field">
-                     <label class="form-field__label" for="firstname">First name:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="firstname" name="firstname" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="lastname">Last name:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="lastname" name="lastname" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="email">Email address:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="email" id="email" name="email" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="phone">
-                        Phone number:
-                        <span class="form-field__required">*</span>
-                        <span class="form-field__icon" data-balloon="We will only get in touch by phone if we are having difficulties reaching you by email." data-balloon-pos="up">
-                           <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M7.875 0a7.875 7.875 0 1 0 0 15.75 7.875 7.875 0 0 0 0-15.75zm1.639 12.205c-.405.16-.728.281-.97.365a2.559 2.559 0 0 1-.841.126c-.491 0-.873-.12-1.145-.36a1.16 1.16 0 0 1-.407-.91c0-.144.01-.29.03-.44.02-.15.053-.317.098-.506l.507-1.792a9.19 9.19 0 0 0 .114-.487 2.16 2.16 0 0 0 .045-.422c0-.228-.047-.388-.141-.478-.095-.09-.275-.134-.542-.134-.13 0-.265.019-.403.06a5.73 5.73 0 0 0-.353.117l.134-.552c.332-.135.65-.251.953-.347.304-.098.59-.146.86-.146.488 0 .864.119 1.128.354.264.235.396.541.396.917 0 .078-.009.215-.027.411a2.752 2.752 0 0 1-.101.541l-.505 1.787a5.055 5.055 0 0 0-.111.49 2.595 2.595 0 0 0-.049.418c0 .237.053.399.16.485.105.086.29.13.55.13a1.6 1.6 0 0 0 .418-.065c.155-.043.267-.081.337-.114l-.135.552zm-.09-7.252a1.204 1.204 0 0 1-.85.328c-.33 0-.615-.11-.853-.328a1.047 1.047 0 0 1-.355-.796c0-.31.12-.576.355-.797.238-.221.523-.331.854-.331.331 0 .615.11.85.331.235.22.353.487.353.797 0 .312-.118.577-.353.796z" fill="#0084C8" fill-rule="nonzero"></path>
-                           </svg>
-                        </span>
-                     </label>
-                     <input class="input" type="tel" id="phone" name="phone" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="address1">Address Line 1:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="address1" name="address1" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="address2">Address Line 2:
-                     </label>
-                     <input class="input" type="text" id="address2" name="address2"><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="city">City:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="city" name="city" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="state">State:  
-                     </label>
-                     <input class="input" type="text" id="state" name="state"><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="country">Country:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="text" id="country" name="country" required><br>
-                  </div>
-                  <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_userdateofbirth">Date of birth:
-                     <span class="form-field__required">*</span>    
-                     </label>
-                     <input class="input" type="date" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth" required><br>
-                  </div>
-                `;
-                document.getElementById("form-field-2").innerHTML = `
-                  <div class="form-field">
-                     <label for="custentity_ob_userchirality">What side is your limb difference?</label>
-                     <select class="input" name="custentity_ob_userchirality" id="custentity_ob_userchirality">
-                        <option></option>
-                        <option name="custentity_ob_userchirality" value="left">Left</option>
-                        <option name="custentity_ob_userchirality" value="right">Right</option>
-                        <option name="custentity_ob_userchirality" value="both">Both</option>
-                     </select>
-                     <br>
-                  </div>
-                  <div class="form-field">
-                     <label for="custentity_ob_userlimbdifference">What is the nature of your upper limb difference?</label>
-                     <select class="input" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" onchange="aboveElbow()">
-                        <option></option>
-                        <option name="custentity_ob_userlimbdifference" value="below-elbow">Below elbow</option>
-                        <option name="custentity_ob_userlimbdifference" value="unsure">Unsure</option>
-                        <option name="custentity_ob_userlimbdifference" value="partial-hand">Partial hand</option>
-                        <option name="custentity_ob_userlimbdifference" value="above-elbow">Above elbow</option>
-                     </select>
-                     <br>
-                     <div class="hidden" id="above-elbow-disclaimer">
-                        <p>The Hero Arm is our first product, and is only available for people with below elbow differences. Please register your interest anyway and we'll get in touch if we develop prostheses for above elbow and partial hand.</p>
-                     </div>
-                  </div>
-                  <div class="form-field">
-                     <label for="custentity_ob_userresiduallengthfreetext">What is the distance between your elbow crease and end of their residual limb?</label>
-                     <input class="input" type="text" id="custentity_ob_userresiduallengthfreetext" name="custentity_ob_userresiduallengthfreetext"><br>
-                  </div>
-                `;
-                $("#form-field-3").removeClass("hidden");
-            }
-            if (x == "reason-tech") {
-                document.getElementById("form-field-1").innerHTML = "INTERESTED IN TECH FORM";
-                document.getElementById("form-field-2").innerHTML = "";
-                $("#form-field-3").removeClass("hidden");
-            }
         }
       </script>
-      <script type="text/javascript">
-        function aboveElbow() {
-            var y = document.getElementById("custentity_ob_userlimbdifference").value;
-
-            if (y == "above-elbow") {
-                $("#above-elbow-disclaimer").removeClass("hidden");
-            } else {
-                $("#above-elbow-disclaimer").addClass("hidden");
-            }
-        }
-    </script>
       <script src="https://shop.openbionics.com/assets/application.js"></script>
       <div id="cookie-law-info-bar" style="display: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; position: fixed; top: 0px; border-bottom: 4px solid rgb(68, 68, 68);"><span>Cookies help us deliver our services. By using our services, you agree to our use of cookies.<a href="#" class="cookie_action_close_header medium cli-plugin-button cli-plugin-main-button" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);">Accept</a></span></div>
       <script type="text/javascript">
