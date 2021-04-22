@@ -598,10 +598,14 @@
                      <input class="input" type="text" id="lastname" name="lastname" required><br>
                   </div>
                   <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_userdateofbirth">Their date of birth:
+                     <label class="form-field__label" for="datepicker">Their date of birth:
                      <span class="form-field__required">*</span>    
                      </label>
-                     <input class="input" type="date" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth" required><br>
+                     <input class="input" type="date" id="datepicker" name="datepicker" required onchange="formatDate()"><br>
+                  </div>
+                  <div class="form-field hidden">
+                     <label for="custentity_ob_userdateofbirth"></label>
+                     <input class="input" type="text" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth"><br>
                   </div>
                 `;
                 document.getElementById("form-field-2").innerHTML = `
@@ -954,10 +958,14 @@
                     </select>
                   </div>
                   <div class="form-field">
-                     <label class="form-field__label" for="custentity_ob_userdateofbirth">Date of birth:
+                     <label class="form-field__label" for="datepicker">Date of birth:
                      <span class="form-field__required">*</span>    
                      </label>
-                     <input class="input" type="date" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth" required><br>
+                     <input class="input" type="date" id="datepicker" name="datepicker" required onchange="formatDate()"><br>
+                  </div>
+                  <div class="form-field hidden">
+                     <label for="custentity_ob_userdateofbirth"></label>
+                     <input class="input" type="text" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth"><br>
                   </div>
                 `;
                 document.getElementById("form-field-2").innerHTML = `
@@ -1010,6 +1018,15 @@
             }
         }
     </script>
+    <script type="text/javascript">
+            function formatDate() {
+                var date = document.getElementById("datepicker").value.split("-");
+                day = date[2];
+                month = date[1];
+                year = date[0];
+                document.getElementById("custentity_ob_userdateofbirth").value = day.concat("/",month,"/",year);
+            }
+        </script>
       <script src="https://shop.openbionics.com/assets/application.js"></script>
       <div id="cookie-law-info-bar" style="display: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: inherit; position: fixed; top: 0px; border-bottom: 4px solid rgb(68, 68, 68);"><span>Cookies help us deliver our services. By using our services, you agree to our use of cookies.<a href="#" class="cookie_action_close_header medium cli-plugin-button cli-plugin-main-button" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);">Accept</a></span></div>
       <script type="text/javascript">
