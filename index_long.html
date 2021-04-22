@@ -287,7 +287,60 @@
                </div>
                <div id="form-field-3" class="hidden">
                   <div class="form-field">
+                     <div class="checkbox">
+                        <input type="checkbox" id="terms" name="terms" class="checkbox__input" value="yes" required="">
+                        <label for="terms">
+                        I agree to Open Bionics' <a href="https://openbionics.com/terms-conditions/">terms and conditions</a> and <a href="https://openbionics.com/privacy-policy/">privacy policy</a>.
+                        <span class="form-field__required">*</span>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label">
+                     Would you like to receive email updates about Open Bionics' cutting edge development and awesome products? We'll treat your personal data with the utmost care and will never sell them to other companies for marketing purposes.
+                     <span class="form-field__required">*</span>
+                     </label>
+                     <div class="radio-group">
+                        <label class="radio-group__label">
+                        <input type="radio" name="marketing" value="yes" required="">
+                        Yes
+                        </label>
+                        <label class="radio-group__label">
+                        <input type="radio" name="marketing" value="no" required="">
+                        No
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label">
+                     Do you consent to us getting in touch by phone if we are having difficulties reaching you by email?
+                     <span class="form-field__required">*</span>
+                     </label>
+                     <div class="radio-group">
+                        <label class="radio-group__label">
+                        <input type="radio" name="phonecontact" value="yes" required="">
+                        Yes
+                        </label>
+                        <label class="radio-group__label">
+                        <input type="radio" name="phonecontact" value="no" required="">
+                        No
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-field" data-signup-cond-field="-interested">
+                     <div class="checkbox">
+                        <input type="checkbox" id="personal" name="personal" class="checkbox__input" value="yes">
+                        <label for="personal">
+                        I consent to the processing of information relating to limb difference and prosthetic clinics.<span class="form-field__required">*</span>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-field">
                     <input class="button" type="submit" name="submit" value="Submit">
+                </div>
+                <div class="form-field">
+                    <span class="form-field__required">*</span>
+                    <em>Indicates required field</em>
                 </div>
                </div>
             </form>
@@ -477,6 +530,62 @@
                 document.getElementById("form-field-1").innerHTML = `
                   <legend>Please complete the short form below:</legend>
                   <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerfirstname">First name:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="custentity_ob_referrerfirstname" name="custentity_ob_referrerfirstname" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerlastname">Last name:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="custentity_ob_referrerlastname" name="custentity_ob_referrerlastname" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referreremail">Email address:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="custentity_ob_referreremail" id="custentity_ob_referreremail" name="email" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerphone">
+                        Phone number:
+                        <span class="form-field__required">*</span>
+                        <span class="form-field__icon" data-balloon="We will only get in touch by phone if we are having difficulties reaching you by email." data-balloon-pos="up">
+                           <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.875 0a7.875 7.875 0 1 0 0 15.75 7.875 7.875 0 0 0 0-15.75zm1.639 12.205c-.405.16-.728.281-.97.365a2.559 2.559 0 0 1-.841.126c-.491 0-.873-.12-1.145-.36a1.16 1.16 0 0 1-.407-.91c0-.144.01-.29.03-.44.02-.15.053-.317.098-.506l.507-1.792a9.19 9.19 0 0 0 .114-.487 2.16 2.16 0 0 0 .045-.422c0-.228-.047-.388-.141-.478-.095-.09-.275-.134-.542-.134-.13 0-.265.019-.403.06a5.73 5.73 0 0 0-.353.117l.134-.552c.332-.135.65-.251.953-.347.304-.098.59-.146.86-.146.488 0 .864.119 1.128.354.264.235.396.541.396.917 0 .078-.009.215-.027.411a2.752 2.752 0 0 1-.101.541l-.505 1.787a5.055 5.055 0 0 0-.111.49 2.595 2.595 0 0 0-.049.418c0 .237.053.399.16.485.105.086.29.13.55.13a1.6 1.6 0 0 0 .418-.065c.155-.043.267-.081.337-.114l-.135.552zm-.09-7.252a1.204 1.204 0 0 1-.85.328c-.33 0-.615-.11-.853-.328a1.047 1.047 0 0 1-.355-.796c0-.31.12-.576.355-.797.238-.221.523-.331.854-.331.331 0 .615.11.85.331.235.22.353.487.353.797 0 .312-.118.577-.353.796z" fill="#0084C8" fill-rule="nonzero"></path>
+                           </svg>
+                        </span>
+                     </label>
+                     <input class="input" type="tel" id="custentity_ob_referrerphone" name="custentity_ob_referrerphone" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerzip">Post code/Zip code:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="custentity_ob_referrerzip" name="custentity_ob_referrerzip" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referrerstateorcountry">State or Country:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="custentity_ob_referrerstateorcountry" name="custentity_ob_referrerstateorcountry"><br>
+                  </div>
+                  <br>
+                  <div class="form-field">
+                     <label class="form-field__label" for="custentity_ob_referraltype">I am applying on behalf of:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <select class="input" id="custentity_ob_referraltype" name="custentity_ob_referraltype" required>
+                        <option></option>
+                        <option value="child">My child</option>
+                        <option value="relative">My relative</option>
+                        <option value="friend">My friend</option>
+                        <option value="other">Someone else</option>
+                     </select>
+                     <br>
+                  </div>
+                  <div class="form-field">
                      <label class="form-field__label" for="firstname">Their first name:
                      <span class="form-field__required">*</span>    
                      </label>
@@ -499,6 +608,36 @@
                      <input class="input" type="text" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth"><br>
                   </div>
                 `;
+                document.getElementById("form-field-2").innerHTML = `
+                  <div class="form-field">
+                     <label for="custentity_ob_userchirality">What side is their limb difference?</label>
+                     <select class="input" name="custentity_ob_userchirality" id="custentity_ob_userchirality">
+                        <option></option>
+                        <option name="custentity_ob_userchirality" value="left">Left</option>
+                        <option name="custentity_ob_userchirality" value="right">Right</option>
+                        <option name="custentity_ob_userchirality" value="both">Both</option>
+                     </select>
+                     <br>
+                  </div>
+                  <div class="form-field">
+                     <label for="custentity_ob_userlimbdifference">What is the nature of their upper limb difference?</label>
+                     <select class="input" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" onchange="aboveElbow()">
+                        <option></option>
+                        <option name="custentity_ob_userlimbdifference" value="below-elbow">Below elbow</option>
+                        <option name="custentity_ob_userlimbdifference" value="unsure">Unsure</option>
+                        <option name="custentity_ob_userlimbdifference" value="partial-hand">Partial hand</option>
+                        <option name="custentity_ob_userlimbdifference" value="above-elbow">Above elbow</option>
+                     </select>
+                     <br>
+                     <div class="hidden" id="above-elbow-disclaimer">
+                        <p>The Hero Arm is our first product, and is only available for people with below elbow differences. Please register your interest anyway and we'll get in touch if we develop prostheses for above elbow and partial hand.</p>
+                     </div>
+                  </div>
+                  <div class="form-field">
+                     <label for="custentity_ob_userresiduallengthfreetext">What is the distance between their elbow crease and end of their residual limb?</label>
+                     <input class="input" type="text" id="custentity_ob_userresiduallengthfreetext" name="custentity_ob_userresiduallengthfreetext"><br>
+                  </div>
+                `;
                 $("#form-field-3").removeClass("hidden");
             }
             if (x == "reason-uld") {
@@ -517,6 +656,308 @@
                      <input class="input" type="text" id="lastname" name="lastname" required><br>
                   </div>
                   <div class="form-field">
+                     <label class="form-field__label" for="email">Email address:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="email" id="email" name="email" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="phone">
+                        Phone number:
+                        <span class="form-field__required">*</span>
+                        <span class="form-field__icon" data-balloon="We will only get in touch by phone if we are having difficulties reaching you by email." data-balloon-pos="up">
+                           <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.875 0a7.875 7.875 0 1 0 0 15.75 7.875 7.875 0 0 0 0-15.75zm1.639 12.205c-.405.16-.728.281-.97.365a2.559 2.559 0 0 1-.841.126c-.491 0-.873-.12-1.145-.36a1.16 1.16 0 0 1-.407-.91c0-.144.01-.29.03-.44.02-.15.053-.317.098-.506l.507-1.792a9.19 9.19 0 0 0 .114-.487 2.16 2.16 0 0 0 .045-.422c0-.228-.047-.388-.141-.478-.095-.09-.275-.134-.542-.134-.13 0-.265.019-.403.06a5.73 5.73 0 0 0-.353.117l.134-.552c.332-.135.65-.251.953-.347.304-.098.59-.146.86-.146.488 0 .864.119 1.128.354.264.235.396.541.396.917 0 .078-.009.215-.027.411a2.752 2.752 0 0 1-.101.541l-.505 1.787a5.055 5.055 0 0 0-.111.49 2.595 2.595 0 0 0-.049.418c0 .237.053.399.16.485.105.086.29.13.55.13a1.6 1.6 0 0 0 .418-.065c.155-.043.267-.081.337-.114l-.135.552zm-.09-7.252a1.204 1.204 0 0 1-.85.328c-.33 0-.615-.11-.853-.328a1.047 1.047 0 0 1-.355-.796c0-.31.12-.576.355-.797.238-.221.523-.331.854-.331.331 0 .615.11.85.331.235.22.353.487.353.797 0 .312-.118.577-.353.796z" fill="#0084C8" fill-rule="nonzero"></path>
+                           </svg>
+                        </span>
+                     </label>
+                     <input class="input" type="tel" id="phone" name="phone" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="address1">Address Line 1:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="address1" name="address1" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="address2">Address Line 2:
+                     </label>
+                     <input class="input" type="text" id="address2" name="address2"><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="city">City:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <input class="input" type="text" id="city" name="city" required><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="state">State:  
+                     </label>
+                     <input class="input" type="text" id="state" name="state"><br>
+                  </div>
+                  <div class="form-field">
+                     <label class="form-field__label" for="country">Country:
+                     <span class="form-field__required">*</span>    
+                     </label>
+                     <select class="input" id="country" name="country" required>
+                        <option value='' selected></option>
+                        <option value='US'>United States</option>
+                        <option value='AF'>Afghanistan</option>
+                        <option value='AX'>Aland Islands</option>
+                        <option value='AL'>Albania</option>
+                        <option value='DZ'>Algeria</option>
+                        <option value='AS'>American Samoa</option>
+                        <option value='AD'>Andorra</option>
+                        <option value='AO'>Angola</option>
+                        <option value='AI'>Anguilla</option>
+                        <option value='AQ'>Antarctica</option>
+                        <option value='AG'>Antigua and Barbuda</option>
+                        <option value='AR'>Argentina</option>
+                        <option value='AM'>Armenia</option>
+                        <option value='AW'>Aruba</option>
+                        <option value='AU'>Australia</option>
+                        <option value='AT'>Austria</option>
+                        <option value='AZ'>Azerbaijan</option>
+                        <option value='BS'>Bahamas</option>
+                        <option value='BH'>Bahrain</option>
+                        <option value='BD'>Bangladesh</option>
+                        <option value='BB'>Barbados</option>
+                        <option value='BY'>Belarus</option>
+                        <option value='BE'>Belgium</option>
+                        <option value='BZ'>Belize</option>
+                        <option value='BJ'>Benin</option>
+                        <option value='BM'>Bermuda</option>
+                        <option value='BT'>Bhutan</option>
+                        <option value='BO'>Bolivia</option>
+                        <option value='BQ'>Bonaire, Saint Eustatius and Saba</option>
+                        <option value='BA'>Bosnia and Herzegovina</option>
+                        <option value='BW'>Botswana</option>
+                        <option value='BV'>Bouvet Island</option>
+                        <option value='BR'>Brazil</option>
+                        <option value='IO'>British Indian Ocean Territory</option>
+                        <option value='BN'>Brunei Darussalam</option>
+                        <option value='BG'>Bulgaria</option>
+                        <option value='BF'>Burkina Faso</option>
+                        <option value='BI'>Burundi</option>
+                        <option value='KH'>Cambodia</option>
+                        <option value='CM'>Cameroon</option>
+                        <option value='CA'>Canada</option>
+                        <option value='IC'>Canary Islands</option>
+                        <option value='CV'>Cape Verde</option>
+                        <option value='KY'>Cayman Islands</option>
+                        <option value='CF'>Central African Republic</option>
+                        <option value='EA'>Ceuta and Melilla</option>
+                        <option value='TD'>Chad</option>
+                        <option value='CL'>Chile</option>
+                        <option value='CN'>China</option>
+                        <option value='CX'>Christmas Island</option>
+                        <option value='CC'>Cocos (Keeling) Islands</option>
+                        <option value='CO'>Colombia</option>
+                        <option value='KM'>Comoros</option>
+                        <option value='CD'>Congo, Democratic Republic of</option>
+                        <option value='CG'>Congo, Republic of</option>
+                        <option value='CK'>Cook Islands</option>
+                        <option value='CR'>Costa Rica</option>
+                        <option value='CI'>Cote e'Ivoire</option>
+                        <option value='HR'>Croatia/Hrvatska</option>
+                        <option value='CU'>Cuba</option>
+                        <option value='CW'>Curaçao</option>
+                        <option value='CY'>Cyprus</option>
+                        <option value='CZ'>Czech Republic</option>
+                        <option value='DK'>Denmark</option>
+                        <option value='DJ'>Djibouti</option>
+                        <option value='DM'>Dominica</option>
+                        <option value='DO'>Dominican Republic</option>
+                        <option value='TL'>East Timor</option>
+                        <option value='EC'>Ecuador</option>
+                        <option value='EG'>Egypt</option>
+                        <option value='SV'>El Salvador</option>
+                        <option value='GQ'>Equatorial Guinea</option>
+                        <option value='ER'>Eritrea</option>
+                        <option value='EE'>Estonia</option>
+                        <option value='ET'>Ethiopia</option>
+                        <option value='FK'>Falkland Islands</option>
+                        <option value='FO'>Faroe Islands</option>
+                        <option value='FJ'>Fiji</option>
+                        <option value='FI'>Finland</option>
+                        <option value='FR'>France</option>
+                        <option value='GF'>French Guiana</option>
+                        <option value='PF'>French Polynesia</option>
+                        <option value='TF'>French Southern Territories</option>
+                        <option value='GA'>Gabon</option>
+                        <option value='GM'>Gambia</option>
+                        <option value='GE'>Georgia</option>
+                        <option value='DE'>Germany</option>
+                        <option value='GH'>Ghana</option>
+                        <option value='GI'>Gibraltar</option>
+                        <option value='GR'>Greece</option>
+                        <option value='GL'>Greenland</option>
+                        <option value='GD'>Grenada</option>
+                        <option value='GP'>Guadeloupe</option>
+                        <option value='GU'>Guam</option>
+                        <option value='GT'>Guatemala</option>
+                        <option value='GG'>Guernsey</option>
+                        <option value='GN'>Guinea</option>
+                        <option value='GW'>Guinea-Bissau</option>
+                        <option value='GY'>Guyana</option>
+                        <option value='HT'>Haiti</option>
+                        <option value='HM'>Heard and McDonald Islands</option>
+                        <option value='VA'>Holy See (City Vatican State)</option>
+                        <option value='HN'>Honduras</option>
+                        <option value='HK'>Hong Kong</option>
+                        <option value='HU'>Hungary</option>
+                        <option value='IS'>Iceland</option>
+                        <option value='IN'>India</option>
+                        <option value='ID'>Indonesia</option>
+                        <option value='IR'>Iran (Islamic Republic of)</option>
+                        <option value='IQ'>Iraq</option>
+                        <option value='IE'>Ireland</option>
+                        <option value='IM'>Isle of Man</option>
+                        <option value='IL'>Israel</option>
+                        <option value='IT'>Italy</option>
+                        <option value='JM'>Jamaica</option>
+                        <option value='JP'>Japan</option>
+                        <option value='JE'>Jersey</option>
+                        <option value='JO'>Jordan</option>
+                        <option value='KZ'>Kazakhstan</option>
+                        <option value='KE'>Kenya</option>
+                        <option value='KI'>Kiribati</option>
+                        <option value='KP'>Korea, Democratic People's Republic</option>
+                        <option value='KR'>Korea, Republic of</option>
+                        <option value='XK'>Kosovo</option>
+                        <option value='KW'>Kuwait</option>
+                        <option value='KG'>Kyrgyzstan</option>
+                        <option value='LA'>Lao People's Democratic Republic</option>
+                        <option value='LV'>Latvia</option>
+                        <option value='LB'>Lebanon</option>
+                        <option value='LS'>Lesotho</option>
+                        <option value='LR'>Liberia</option>
+                        <option value='LY'>Libya</option>
+                        <option value='LI'>Liechtenstein</option>
+                        <option value='LT'>Lithuania</option>
+                        <option value='LU'>Luxembourg</option>
+                        <option value='MO'>Macau</option>
+                        <option value='MK'>Macedonia</option>
+                        <option value='MG'>Madagascar</option>
+                        <option value='MW'>Malawi</option>
+                        <option value='MY'>Malaysia</option>
+                        <option value='MV'>Maldives</option>
+                        <option value='ML'>Mali</option>
+                        <option value='MT'>Malta</option>
+                        <option value='MH'>Marshall Islands</option>
+                        <option value='MQ'>Martinique</option>
+                        <option value='MR'>Mauritania</option>
+                        <option value='MU'>Mauritius</option>
+                        <option value='YT'>Mayotte</option>
+                        <option value='MX'>Mexico</option>
+                        <option value='FM'>Micronesia, Federal State of</option>
+                        <option value='MD'>Moldova, Republic of</option>
+                        <option value='MC'>Monaco</option>
+                        <option value='MN'>Mongolia</option>
+                        <option value='ME'>Montenegro</option>
+                        <option value='MS'>Montserrat</option>
+                        <option value='MA'>Morocco</option>
+                        <option value='MZ'>Mozambique</option>
+                        <option value='MM'>Myanmar (Burma)</option>
+                        <option value='NA'>Namibia</option>
+                        <option value='NR'>Nauru</option>
+                        <option value='NP'>Nepal</option>
+                        <option value='NL'>Netherlands</option>
+                        <option value='AN'>Netherlands Antilles (Deprecated)</option>
+                        <option value='NC'>New Caledonia</option>
+                        <option value='NZ'>New Zealand</option>
+                        <option value='NI'>Nicaragua</option>
+                        <option value='NE'>Niger</option>
+                        <option value='NG'>Nigeria</option>
+                        <option value='NU'>Niue</option>
+                        <option value='NF'>Norfolk Island</option>
+                        <option value='MP'>Northern Mariana Islands</option>
+                        <option value='NO'>Norway</option>
+                        <option value='OM'>Oman</option>
+                        <option value='PK'>Pakistan</option>
+                        <option value='PW'>Palau</option>
+                        <option value='PA'>Panama</option>
+                        <option value='PG'>Papua New Guinea</option>
+                        <option value='PY'>Paraguay</option>
+                        <option value='PE'>Peru</option>
+                        <option value='PH'>Philippines</option>
+                        <option value='PN'>Pitcairn Island</option>
+                        <option value='PL'>Poland</option>
+                        <option value='PT'>Portugal</option>
+                        <option value='PR'>Puerto Rico</option>
+                        <option value='QA'>Qatar</option>
+                        <option value='RE'>Reunion Island</option>
+                        <option value='RO'>Romania</option>
+                        <option value='RU'>Russian Federation</option>
+                        <option value='RW'>Rwanda</option>
+                        <option value='BL'>Saint Barthélemy</option>
+                        <option value='SH'>Saint Helena</option>
+                        <option value='KN'>Saint Kitts and Nevis</option>
+                        <option value='LC'>Saint Lucia</option>
+                        <option value='MF'>Saint Martin</option>
+                        <option value='VC'>Saint Vincent and the Grenadines</option>
+                        <option value='WS'>Samoa</option>
+                        <option value='SM'>San Marino</option>
+                        <option value='ST'>Sao Tome and Principe</option>
+                        <option value='SA'>Saudi Arabia</option>
+                        <option value='SN'>Senegal</option>
+                        <option value='RS'>Serbia</option>
+                        <option value='CS'>Serbia and Montenegro (Deprecated)</option>
+                        <option value='SC'>Seychelles</option>
+                        <option value='SL'>Sierra Leone</option>
+                        <option value='SG'>Singapore</option>
+                        <option value='SX'>Sint Maarten</option>
+                        <option value='SK'>Slovak Republic</option>
+                        <option value='SI'>Slovenia</option>
+                        <option value='SB'>Solomon Islands</option>
+                        <option value='SO'>Somalia</option>
+                        <option value='ZA'>South Africa</option>
+                        <option value='GS'>South Georgia</option>
+                        <option value='SS'>South Sudan</option>
+                        <option value='ES'>Spain</option>
+                        <option value='LK'>Sri Lanka</option>
+                        <option value='PM'>St. Pierre and Miquelon</option>
+                        <option value='PS'>State of Palestine</option>
+                        <option value='SD'>Sudan</option>
+                        <option value='SR'>Suriname</option>
+                        <option value='SJ'>Svalbard and Jan Mayen Islands</option>
+                        <option value='SZ'>Swaziland</option>
+                        <option value='SE'>Sweden</option>
+                        <option value='CH'>Switzerland</option>
+                        <option value='SY'>Syrian Arab Republic</option>
+                        <option value='TW'>Taiwan</option>
+                        <option value='TJ'>Tajikistan</option>
+                        <option value='TZ'>Tanzania</option>
+                        <option value='TH'>Thailand</option>
+                        <option value='TG'>Togo</option>
+                        <option value='TK'>Tokelau</option>
+                        <option value='TO'>Tonga</option>
+                        <option value='TT'>Trinidad and Tobago</option>
+                        <option value='TN'>Tunisia</option>
+                        <option value='TR'>Turkey</option>
+                        <option value='TM'>Turkmenistan</option>
+                        <option value='TC'>Turks and Caicos Islands</option>
+                        <option value='TV'>Tuvalu</option>
+                        <option value='UM'>US Minor Outlying Islands</option>
+                        <option value='UG'>Uganda</option>
+                        <option value='UA'>Ukraine</option>
+                        <option value='AE'>United Arab Emirates</option>
+                        <option value='GB'>United Kingdom</option>
+                        <option value='UY'>Uruguay</option>
+                        <option value='UZ'>Uzbekistan</option>
+                        <option value='VU'>Vanuatu</option>
+                        <option value='VE'>Venezuela</option>
+                        <option value='VN'>Vietnam</option>
+                        <option value='VG'>Virgin Islands (British)</option>
+                        <option value='VI'>Virgin Islands (USA)</option>
+                        <option value='WF'>Wallis and Futuna</option>
+                        <option value='EH'>Western Sahara</option>
+                        <option value='YE'>Yemen</option>
+                        <option value='ZM'>Zambia</option>
+                        <option value='ZW'>Zimbabwe</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
                      <label class="form-field__label" for="datepicker">Date of birth:
                      <span class="form-field__required">*</span>    
                      </label>
@@ -525,6 +966,36 @@
                   <div class="form-field hidden">
                      <label for="custentity_ob_userdateofbirth"></label>
                      <input class="input" type="text" id="custentity_ob_userdateofbirth" name="custentity_ob_userdateofbirth"><br>
+                  </div>
+                `;
+                document.getElementById("form-field-2").innerHTML = `
+                  <div class="form-field">
+                     <label for="custentity_ob_userchirality">What side is your limb difference?</label>
+                     <select class="input" name="custentity_ob_userchirality" id="custentity_ob_userchirality">
+                        <option></option>
+                        <option name="custentity_ob_userchirality" value="left">Left</option>
+                        <option name="custentity_ob_userchirality" value="right">Right</option>
+                        <option name="custentity_ob_userchirality" value="both">Both</option>
+                     </select>
+                     <br>
+                  </div>
+                  <div class="form-field">
+                     <label for="custentity_ob_userlimbdifference">What is the nature of your upper limb difference?</label>
+                     <select class="input" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" onchange="aboveElbow()">
+                        <option></option>
+                        <option name="custentity_ob_userlimbdifference" value="below-elbow">Below elbow</option>
+                        <option name="custentity_ob_userlimbdifference" value="unsure">Unsure</option>
+                        <option name="custentity_ob_userlimbdifference" value="partial-hand">Partial hand</option>
+                        <option name="custentity_ob_userlimbdifference" value="above-elbow">Above elbow</option>
+                     </select>
+                     <br>
+                     <div class="hidden" id="above-elbow-disclaimer">
+                        <p>The Hero Arm is our first product, and is only available for people with below elbow differences. Please register your interest anyway and we'll get in touch if we develop prostheses for above elbow and partial hand.</p>
+                     </div>
+                  </div>
+                  <div class="form-field">
+                     <label for="custentity_ob_userresiduallengthfreetext">What is the distance between your elbow crease and end of their residual limb?</label>
+                     <input class="input" type="text" id="custentity_ob_userresiduallengthfreetext" name="custentity_ob_userresiduallengthfreetext"><br>
                   </div>
                 `;
                 $("#form-field-3").removeClass("hidden");
