@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+* {
+	box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: .01em;
+	color: #000;
+}
+
+.contact-form__container {
+    width: calc(100% - 20vw);
+    margin: 0 auto;
+}
+
+.contact-form__content {
+	text-align: center;
+}
+
+h2 {
+	font-weight: 200;
+	font-size: 56px;
+	line-height: 80px;
+	letter-spacing: -0.015em;
+	text-transform: capitalize;
+}
+
+.contact-form__form-container {
+    max-width: 500px;
+    margin: 50px auto 0;
+}
+
+.form_fields {
+    padding: 0;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.field {
+    width: 100%;
+    margin-bottom: 37px;
+    display: inline-block;
+}
+
+.field_label {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+}
+
+.input_container {
+    background: #fff;
+    color: grey;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 0;
+    margin-top: 11px;
+}
+
+.input_container input, .input_container select {
+    width: 100%;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: grey;
+    padding: 0 10px;
+    height: 40px;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    position: relative;
+}
