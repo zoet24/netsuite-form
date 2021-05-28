@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     	<link rel="stylesheet" href="style.css">
     </head>
 
@@ -9,7 +12,7 @@
     		<div class="contact-form__content">
     			<h2>Register for a hero arm</h2>
                 <div class="contact-form__form-container">
-        			<form method="POST" name="register-for-hero">
+        			<form method="POST" name="register-for-hero" action="https://5425059.extforms.netsuite.com/app/site/crm/externalleadpage.nl?compid=5425059&formid=5&h=AAFdikaITc0USB_KPoI4r5JpM-MMqPZF6jdPHIUxP4mdOlsLfa0">
                 		<div class="form_body">
                 			<!-- FIRST PART OF FORM -->
                 			<ul class="form_fields" id="form_fields_one">
@@ -88,33 +91,25 @@
                     document.getElementById("form_fields_two").innerHTML = `
                         <!-- Child's name -->
                         <li class="field">
-                            <label class="field_label" for="">What is your child's name?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_referrerfirstname">What is your child's name?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
-                                <input required name="" id="" type="text" aria-required="true" aria-invalid="false">
+                                <input required name="custentity_ob_referrerfirstname" id="custentity_ob_referrerfirstname" type="text" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Nature of limb difference drop down -->
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userchirality">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
-                                <select required class="field_select" name="custentity_ob_userchirality" id="custentity_ob_userchirality" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
-                                    <option value="" selected="selected" class="gf_placeholder">Please select...</option>
+                                <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
+                                    <option value="" selected="selected">Please select...</option>
                                     <option value="Below Elbow">Below Elbow</option>
                                     <option value="Above Elbow">Above Elbow</option>
                                     <option value="Partial Hand">Partial Hand</option>
                                     <option value="Unsure">Unsure</option>
                                 </select>
                             </div>
-                        </li>
-                        <li class="field hide">
-                            <hr>
-                            <p>The Hero Arm is our first product, and is only available 
-                            for people with below elbow differences. Please register your 
-                            interest anyway and we'll get in touch if we develop prostheses 
-                            for above elbow and partial hand.</p>
-                            <hr>
                         </li>
                     `;
                     document.getElementById("form_fields_five").innerHTML = "";
@@ -123,7 +118,7 @@
                     document.getElementById("form_fields_five").innerHTML = `
                         <!-- Consent (privacy) checkbox -->
                         <li class="field">
-                            <div class="input_container input_container_checkbox border-none">
+                            <div class="input_container input_container_checkbox border-none margin-bottom">
                                 <input required name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
                                 <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
                             </div>
@@ -136,11 +131,11 @@
                     document.getElementById("form_fields_two").innerHTML = `
                         <!-- Nature of limb difference drop down -->
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userchirality">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
-                                <select required class="field_select" name="custentity_ob_userchirality" id="custentity_ob_userchirality" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
-                                    <option value="" selected="selected" class="gf_placeholder">Please select...</option>
+                                <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
+                                    <option value="" selected="selected">Please select...</option>
                                     <option value="Below Elbow">Below Elbow</option>
                                     <option value="Above Elbow">Above Elbow</option>
                                     <option value="Partial Hand">Partial Hand</option>
@@ -154,18 +149,18 @@
             }
 
             function formThree() {
-                var x = document.forms["register-for-hero"]["custentity_ob_userchirality"].value;
+                var x = document.forms["register-for-hero"]["custentity_ob_userlimbdifference"].value;
                 if (x == "") {
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                 } else if ((x == "Below Elbow") || (x == "Unsure")) {
                     document.getElementById("form_fields_three").innerHTML = `
                         <li class="field">
-                            <label class="field_label" for="">What side is your/their limb difference?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userchirality">What side is your/their limb difference?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
-                                <select required class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
-                                    <option value="" selected="selected" class="gf_placeholder">Please select...</option>
+                                <select required class="field_select" name="custentity_ob_userchirality" id="custentity_ob_userchirality" type="number" aria-required="true" aria-invalid="false">
+                                    <option value="" selected="selected">Please select...</option>
                                     <option value="Left">Left</option>
                                     <option value="Right">Right</option>
                                     <option value="Both">Both</option>
@@ -174,28 +169,28 @@
                         </li>
                         <!-- Distance of residual limb -->
                         <li class="field">
-                            <label class="field_label" for="">What is the distance between your/their elbow crease and end of your/their residual limb?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userresiduallengthfreetext">What is the distance between your/their elbow crease and end of your/their residual limb?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
-                                <input required name="" id="" type="text" placeholder="(mm)" aria-required="true" aria-invalid="false">
+                                <input required name="custentity_ob_userresiduallengthfreetext" id="custentity_ob_userresiduallengthfreetext" type="text" placeholder="(mm)" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                     `;
                     document.getElementById("form_fields_four").innerHTML = `
                         <!-- DOB -->
                         <li class="field">
-                            <label class="field_label" for="">What is your/their date of birth?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userdateofbirth">What is your/their date of birth?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
-                                <input required name="" id="" type="text" placeholder="DD/MM/YYYY" aria-required="true" aria-invalid="false">
+                                <input required name="custentity_ob_userdateofbirth" id="custentity_ob_userdateofbirth" type="text" placeholder="DD/MM/YYYY" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Postcode -->
                         <li class="field">
-                            <label class="field_label" for="">Please provide your postcode (USA, UK, France, Germany)
+                            <label class="field_label" for="zip">Please provide your postcode (USA, UK, France, Germany)
                             </label>
                             <div class="input_container input_container_text">
-                                <input name="" id="" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
+                                <input name="zip" id="zip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Country of residence drop down -->
@@ -477,18 +472,18 @@
                     document.getElementById("form_fields_four").innerHTML = `
                         <!-- DOB -->
                         <li class="field">
-                            <label class="field_label" for="">What is your/their date of birth?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userdateofbirth">What is your/their date of birth?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
-                                <input required name="" id="" type="text" placeholder="DD/MM/YYYY" aria-required="true" aria-invalid="false">
+                                <input required name="custentity_ob_userdateofbirth" id="custentity_ob_userdateofbirth" type="text" placeholder="DD/MM/YYYY" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Postcode -->
                         <li class="field">
-                            <label class="field_label" for="">Please provide your postcode (USA, UK, France, Germany)
+                            <label class="field_label" for="zip">Please provide your postcode (USA, UK, France, Germany)
                             </label>
                             <div class="input_container input_container_text">
-                                <input name="" id="" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
+                                <input name="zip" id="zip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Country of residence drop down -->
@@ -766,14 +761,14 @@
                 } else {
                     document.getElementById("form_fields_five").innerHTML = `
                     <!-- Consent (privacy) checkbox -->
-                    <li class="field margin-bottom">
-                        <div class="input_container input_container_checkbox border-none">
+                    <li class="field">
+                        <div class="input_container input_container_checkbox border-none margin-bottom">
                             <input required name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
                             <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
                         </div>
                     </li>
                     <!-- Email updates -->
-                    <li class="field">
+                    <!-- <li class="field">
                         <label class="field_label" for="">Would you like to receive email updates about Open Bionics' cutting edge development and awesome products? We'll treat your personal data with the utmost care and will never sell them to other companies for marketing purposes.<span class="field_required"> *</span>
                         </label>
                         <div class="input_container input_container_radio border-none">
@@ -788,9 +783,9 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li> -->
                     <!-- Get in touch -->
-                    <li class="field margin-none">
+                    <!-- <li class="field margin-none">
                         <label class="field_label" for="">Do you consent to us getting in touch by phone if we are having difficulties reaching you by email?<span class="field_required"> *</span>
                         </label>
                         <div class="input_container input_container_radio border-none">
@@ -805,10 +800,10 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li> -->
                     <!-- Consent (clinics) checkbox -->
                     <li class="field">
-                        <div class="input_container input_container_checkbox border-none">
+                        <div class="input_container input_container_checkbox border-none margin-bottom">
                             <input required name="checkbox_consent_clinics" id="checkbox_consent_clinics" type="checkbox" aria-required="true" aria-invalid="false">
                             <label class="field_label" for="checkbox_consent_clinics">I consent to the processing of information relating to limb difference and prosthetic clinics.<span class="field_required"> *</span></label>
                         </div>
