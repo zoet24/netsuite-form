@@ -13,10 +13,6 @@ body {
 	color: #000;
 }
 
-.hide {
-    display: none!important;
-}
-
 .contact-form__container {
     width: calc(100% - 20vw);
     margin: 0 auto;
@@ -32,6 +28,22 @@ h2 {
 	line-height: 80px;
 	letter-spacing: -0.015em;
 	text-transform: capitalize;
+}
+
+.border-none {
+    border: none!important;
+}
+
+.margin-none {
+    margin: 0!important;
+}
+
+.margin-topandbottom {
+    margin: 50px 0px!important;
+}
+
+.margin-bottom {
+    margin-bottom: 50px!important;
 }
 
 .contact-form__form-container {
@@ -51,8 +63,12 @@ h2 {
 
 .field {
     width: 100%;
-    margin-bottom: 37px;
+    margin-bottom: 20px;
     display: inline-block;
+}
+
+.field-short {
+    width: 48%;
 }
 
 .field_label {
@@ -202,4 +218,31 @@ h2 {
 
 .input_container_radio li input[type=radio]:checked+label:after {
     opacity: 1;
+}
+
+/* Submit button */
+.input_container_submit {
+    width: 100%;
+    text-align: center;
+}
+
+input[type=submit] {
+    line-height: 40px;
+    border: 0;
+    border-radius: 40px;
+    font-size: 17px;
+    letter-spacing: -0.015em;
+    display: inline-block;
+    text-transform: capitalize;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgba(31,165,222,1) 0%, rgba(119,100,239,1) 100%);
+    padding: 0 31px;
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+#form_fields_five {
+    margin: 0;
 }
