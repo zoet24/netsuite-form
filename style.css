@@ -131,7 +131,7 @@ h2 {
 }
 
 .input_container_checkbox input[type=checkbox]:checked+label:before {
-    background-color: grey;
+    background-color: #0085ca;
     color: #fff;
 }
 

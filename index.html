@@ -9,48 +9,48 @@
     		<div class="contact-form__content">
     			<h2>Register for a hero arm</h2>
                 <div class="contact-form__form-container">
-        			<form method="POST">
+        			<form method="POST" name="register-for-hero">
                 		<div class="form_body">
                 			<!-- FIRST PART OF FORM -->
-                			<ul class="form_fields">
+                			<ul class="form_fields" id="form_fields_one">
                 				<!-- First name -->
                 				<li class="field">
-                					<label class="field_label" for="">First name<span class="field_required"> *</span>
+                					<label class="field_label" for="firstname">First name<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_text">
-                						<input name="" id="" type="text" placeholder="First name" aria-required="true" aria-invalid="false">
+                						<input required name="firstname" id="firstname" type="text" placeholder="First name" aria-required="true" aria-invalid="false">
                 					</div>
                 				</li>
                 				<!-- Last name -->
                 				<li class="field">
-                					<label class="field_label" for="">Last name<span class="field_required"> *</span>
+                					<label class="field_label" for="lastname">Last name<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_text">
-                						<input name="" id="" type="text" placeholder="Last name" aria-required="true" aria-invalid="false">
+                						<input required name="lastname" id="lastname" type="text" placeholder="Last name" aria-required="true" aria-invalid="false">
                 					</div>
                 				</li>
                 				<!-- Email -->
                 				<li class="field">
-                					<label class="field_label" for="">Email<span class="field_required"> *</span>
+                					<label class="field_label" for="email">Email<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_text">
-                						<input name="" id="" type="text" placeholder="Email" aria-required="true" aria-invalid="false">
+                						<input required name="email" id="email" type="text" placeholder="Email" aria-required="true" aria-invalid="false">
                 					</div>
                 				</li>
                 				<!-- Phone number -->
                 				<li class="field">
-                					<label class="field_label" for="">Phone number<span class="field_required"> *</span>
+                					<label class="field_label" for="phone">Phone number<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_number">
-                						<input name="" id="" type="number" placeholder="Phone number" aria-required="true" aria-invalid="false">
+                						<input required name="phone" id="phone" type="number" placeholder="Phone number" aria-required="true" aria-invalid="false">
                 					</div>
                 				</li>
                 				<!-- Why are you registering drop down -->
                 				<li class="field">
-                					<label class="field_label" for="">Why are you registering?<span class="field_required"> *</span>
+                					<label class="field_label" for="custentity_ob_referraltype">Why are you registering?<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_select">
-                						<select class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
+                						<select required class="field_select" name="custentity_ob_referraltype" id="custentity_ob_referraltype" type="number" aria-required="true" aria-invalid="false" onchange="formTwo()">
                 							<option value="" selected="selected">Please select...</option>
                 							<option value="I have a limb difference">I have a limb difference</option>
                 							<option value="I'm registering for someone with a limb difference">I'm registering for someone with a limb difference</option>
@@ -62,144 +62,118 @@
                 			</ul>
                 			<hr>
                 			<!-- SECOND PART OF FORM -->
-                			<ul class="form_fields hide">
-                				<!-- Nature of limb difference drop down -->
-                				<li class="field">
-                					<label class="field_label" for="">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
-                					</label>
-                					<div class="input_container input_container_select">
-                						<select class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
-                							<option value="" selected="selected" class="gf_placeholder">Please select...</option>
-                							<option value="Below Elbow">Below Elbow</option>
-                							<option value="Above Elbow">Above Elbow</option>
-                							<option value="Partial Hand">Partial Hand</option>
-                							<option value="Unsure">Unsure</option>
-                						</select>
-                					</div>
-                                </li>
-                                <li class="field">
-                                    <p>The Hero Arm is our first product, and is only available 
-                                    for people with below elbow differences. Please register your 
-                                    interest anyway and we'll get in touch if we develop prostheses 
-                                    for above elbow and partial hand.</p>
-                                </li>
+                			<ul class="form_fields" id="form_fields_two">
+                				
                 			</ul>
                 			<hr>
                 			<!-- THIRD PART OF FORM -->
-                			<ul class="form_fields hide">
-                				<!-- What side is limb difference drop down -->
-                				<li class="field">
-                					<label class="field_label" for="">What side is your/their limb difference?<span class="field_required"> *</span>
-                					</label>
-                					<div class="input_container input_container_select">
-                						<select class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
-                							<option value="" selected="selected" class="gf_placeholder">Please select...</option>
-                							<option value="Left">Left</option>
-                							<option value="Right">Right</option>
-                							<option value="Both">Both</option>
-                						</select>
-                					</div>
-                				</li>
-                				<!-- Distance of residual limb -->
-                				<li class="field">
-                					<label class="field_label" for="">What is the distance between your/their elbow crease and end of your/their residual limb?<span class="field_required"> *</span>
-                					</label>
-                					<div class="input_container input_container_text">
-                						<input name="" id="" type="text" placeholder="(mm)" aria-required="true" aria-invalid="false">
-                					</div>
-                				</li>
+                			<ul class="form_fields" id="form_fields_three">
+                				
                 			</ul>
                 			<hr>
                 			<!-- FOURTH PART OF FORM -->
-                			<ul class="form_fields hide">
-                				<!-- DOB -->
-                				<li class="field">
-                					<label class="field_label" for="">What is your/their date of birth?<span class="field_required"> *</span>
-                					</label>
-                					<div class="input_container input_container_text">
-                						<input name="" id="" type="text" placeholder="DD/MM/YYYY" aria-required="true" aria-invalid="false">
-                					</div>
-                				</li>
-                				<!-- Country of residence drop down -->
-                				<li class="field">
-                					<label class="field_label" for="">What's your country of residence?<span class="field_required"> *</span>
-                					</label>
-                					<div class="input_container input_container_select">
-                						<select class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
-                							<option value="" selected="selected" class="gf_placeholder">Please select...</option>
-                							<option value="USA">USA</option>
-                							<option value="UK">UK</option>
-                							<option value="France">France</option>
-                							<option value="Germany">Germany</option>
-                						</select>
-                					</div>
-                				</li>
-                				<!-- Postcode -->
-                				<li class="field">
-                					<label class="field_label" for="">Please provide your postcode (USA, UK, France, Germany)
-                					</label>
-                					<div class="input_container input_container_text">
-                						<input name="" id="" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
-                					</div>
-                				</li>
+                			<ul class="form_fields" id="form_fields_four">
+                				
                 			</ul>
                             <hr>
                             <!-- FIFTH PART OF FORM -->
-                			<ul class="form_fields hide">
-                				<!-- Consent (privacy) checkbox -->
-                				<li class="field">
-                					<div class="input_container input_container_checkbox">
-                                        <input name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
-                                        <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
-                					</div>
-                				</li>
-                				<!-- Email updates -->
-                				<li class="field">
-                					<label class="field_label" for="">Would you like to receive email updates about Open Bionics' cutting edge development and awesome products? We'll treat your personal data with the utmost care and will never sell them to other companies for marketing purposes.<span class="field_required"> *</span>
-                					</label>
-                					<div class="input_container input_container_radio">
-                                        <ul class="field_radio">
-                                            <li>
-                                                <input name="emailupdates" id="yes_emailupdates" value="Yes" type="radio" aria-required="true" aria-invalid="false">
-                                                <label for="yes_emailupdates">Yes</label>
-                                            </li>
-                                            <li>
-                                                <input name="emailupdates" id="no_emailupdates" value="No" type="radio" aria-required="true" aria-invalid="false">
-                                                <label for="no_emailupdates">No</label>
-                                            </li>
-                                        </ul>
-                					</div>
-                                </li>
-                                <!-- Get in touch -->
-                				<li class="field">
-                					<label class="field_label" for="">Do you consent to us getting in touch by phone if we are having difficulties reaching you by email?<span class="field_required"> *</span>
-                					</label>
-                					<div class="input_container input_container_radio">
-                                        <ul class="field_radio">
-                                            <li>
-                                                <input name="getintouch" id="yes_getintouch" value="Yes" type="radio" aria-required="true" aria-invalid="false">
-                                                <label for="yes_getintouch">Yes</label>
-                                            </li>
-                                            <li>
-                                                <input name="getintouch" id="no_getintouch" value="No" type="radio" aria-required="true" aria-invalid="false">
-                                                <label for="no_getintouch">No</label>
-                                            </li>
-                                        </ul>
-                					</div>
-                                </li>
-                                <!-- Consent (clinics) checkbox -->
-                				<li class="field">
-                					<div class="input_container input_container_checkbox">
-                                        <input name="checkbox_consent_clinics" id="checkbox_consent_clinics" type="checkbox" aria-required="true" aria-invalid="false">
-                                        <label class="field_label" for="checkbox_consent_clinics">I consent to the processing of information relating to limb difference and prosthetic clinics.<span class="field_required"> *</span></label>
-                					</div>
-                				</li>
+                			<ul class="form_fields" id="form_fields_five">
+                				
                 			</ul>
-                			<hr>
+                            <hr>
+                            <input type="submit" value="Submit">
                 		</div>
                 	</form>
                 </div>
     		</div>
-    	</div>
+        </div>
+        
+        <script>
+            function formTwo() {
+                var x = document.forms["register-for-hero"]["custentity_ob_referraltype"].value;
+                if (x == "") {
+                    document.getElementById("form_fields_two").innerHTML = "";
+                    document.getElementById("form_fields_five").innerHTML = "";
+                } else if (x == "I have a child with a limb difference") {
+                    document.getElementById("form_fields_two").innerHTML = `
+                        <!-- Child's name -->
+                        <li class="field">
+                            <label class="field_label" for="">What is your child's name?<span class="field_required"> *</span>
+                            </label>
+                            <div class="input_container input_container_text">
+                                <input required name="" id="" type="text" aria-required="true" aria-invalid="false">
+                            </div>
+                        </li>
+                        <!-- Nature of limb difference drop down -->
+                        <li class="field">
+                            <label class="field_label" for="">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
+                            </label>
+                            <div class="input_container input_container_select">
+                                <select required class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
+                                    <option value="" selected="selected" class="gf_placeholder">Please select...</option>
+                                    <option value="Below Elbow">Below Elbow</option>
+                                    <option value="Above Elbow">Above Elbow</option>
+                                    <option value="Partial Hand">Partial Hand</option>
+                                    <option value="Unsure">Unsure</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="field hide">
+                            <p>The Hero Arm is our first product, and is only available 
+                            for people with below elbow differences. Please register your 
+                            interest anyway and we'll get in touch if we develop prostheses 
+                            for above elbow and partial hand.</p>
+                        </li>
+                    `;
+                    document.getElementById("form_fields_five").innerHTML = "";
+                } else if (x == "I'm interested in the tech innovation") {
+                    document.getElementById("form_fields_two").innerHTML = "";
+                    document.getElementById("form_fields_five").innerHTML = `
+                        <!-- Consent (privacy) checkbox -->
+                        <li class="field">
+                            <div class="input_container input_container_checkbox">
+                                <input required name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
+                                <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
+                            </div>
+                        </li>
+                    `;
+                } else {
+                    document.getElementById("form_fields_two").innerHTML = `
+                        <!-- Nature of limb difference drop down -->
+                        <li class="field">
+                            <label class="field_label" for="">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
+                            </label>
+                            <div class="input_container input_container_select">
+                                <select required class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
+                                    <option value="" selected="selected" class="gf_placeholder">Please select...</option>
+                                    <option value="Below Elbow">Below Elbow</option>
+                                    <option value="Above Elbow">Above Elbow</option>
+                                    <option value="Partial Hand">Partial Hand</option>
+                                    <option value="Unsure">Unsure</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="field hide">
+                            <p>The Hero Arm is our first product, and is only available 
+                            for people with below elbow differences. Please register your 
+                            interest anyway and we'll get in touch if we develop prostheses 
+                            for above elbow and partial hand.</p>
+                        </li>
+                    `;
+                    document.getElementById("form_fields_five").innerHTML = "";
+                }
+            }
+
+            function formThree() {
+                var x = document.forms["register-for-hero"]["custentity_ob_referraltype"].value;
+                if (x == "") {
+                    document.getElementById("form_fields_three").innerHTML = ""
+                } else {
+                    document.getElementById("form_fields_three").innerHTML = `
+                        
+                    `;
+                }
+            }
+        </script>
     </body>
 </html>
