@@ -47,6 +47,10 @@ h2 {
     margin-bottom: 50px!important;
 }
 
+.hide {
+    display: none!important;
+}
+
 .contact-form__form-container {
     max-width: 500px;
     margin: 0 auto;
@@ -242,6 +246,10 @@ input[type=submit] {
 
 #form_fields_five {
     margin: 0;
+}
+
+#datepicker {
+    font-family: 'Roboto', sans-serif;
 }
 
 @media (min-width: 600px) {
