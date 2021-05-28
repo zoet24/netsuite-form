@@ -179,10 +179,17 @@
                     document.getElementById("form_fields_four").innerHTML = `
                         <!-- DOB -->
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userdateofbirth">What is your/their date of birth?<span class="field_required"> *</span>
+                            <label class="field_label" for="datepicker">What is your/their date of birth?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
-                                <input required name="custentity_ob_userdateofbirth" id="custentity_ob_userdateofbirth" type="text" placeholder="DD/MM/YYYY" aria-required="true" aria-invalid="false">
+                                <input required name="datepicker" id="datepicker" type="date" aria-required="true" aria-invalid="false" onchange="formatDate()">
+                            </div>
+                        </li>
+                        <li class="field hide">
+                            <label class="field_label" for="custentity_ob_userdateofbirth">
+                            </label>
+                            <div class="input_container input_container_text">
+                                <input required name="custentity_ob_userdateofbirth" id="custentity_ob_userdateofbirth" type="text" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Postcode -->
@@ -472,10 +479,17 @@
                     document.getElementById("form_fields_four").innerHTML = `
                         <!-- DOB -->
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userdateofbirth">What is your/their date of birth?<span class="field_required"> *</span>
+                            <label class="field_label" for="datepicker">What is your/their date of birth?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
-                                <input required name="custentity_ob_userdateofbirth" id="custentity_ob_userdateofbirth" type="text" placeholder="DD/MM/YYYY" aria-required="true" aria-invalid="false">
+                                <input required name="datepicker" id="datepicker" type="date" aria-required="true" aria-invalid="false" onchange="formatDate()">
+                            </div>
+                        </li>
+                        <li class="field hide">
+                            <label class="field_label" for="custentity_ob_userdateofbirth">
+                            </label>
+                            <div class="input_container input_container_text">
+                                <input required name="custentity_ob_userdateofbirth" id="custentity_ob_userdateofbirth" type="text" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Postcode -->
@@ -813,6 +827,14 @@
                     </div>
                     `;
                 }
+            }
+
+            function formatDate() {
+                var date = document.getElementById("datepicker").value.split("-");
+                day = date[2];
+                month = date[1];
+                year = date[0];
+                document.getElementById("custentity_ob_userdateofbirth").value = day.concat("/",month,"/",year);
             }
         </script>
     </body>
