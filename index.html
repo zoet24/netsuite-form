@@ -62,32 +62,38 @@
                 			</ul>
                 			<hr>
                 			<!-- SECOND PART OF FORM -->
-                			<ul class="form_fields">
+                			<ul class="form_fields hide">
                 				<!-- Nature of limb difference drop down -->
                 				<li class="field">
                 					<label class="field_label" for="">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_select">
                 						<select class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
-                							<option value="" selected="selected" class="gf_placeholder">Please select</option>
+                							<option value="" selected="selected" class="gf_placeholder">Please select...</option>
                 							<option value="Below Elbow">Below Elbow</option>
                 							<option value="Above Elbow">Above Elbow</option>
                 							<option value="Partial Hand">Partial Hand</option>
                 							<option value="Unsure">Unsure</option>
                 						</select>
                 					</div>
-                				</li>
+                                </li>
+                                <li class="field">
+                                    <p>The Hero Arm is our first product, and is only available 
+                                    for people with below elbow differences. Please register your 
+                                    interest anyway and we'll get in touch if we develop prostheses 
+                                    for above elbow and partial hand.</p>
+                                </li>
                 			</ul>
                 			<hr>
                 			<!-- THIRD PART OF FORM -->
-                			<ul class="form_fields">
+                			<ul class="form_fields hide">
                 				<!-- What side is limb difference drop down -->
                 				<li class="field">
                 					<label class="field_label" for="">What side is your/their limb difference?<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_select">
                 						<select class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
-                							<option value="" selected="selected" class="gf_placeholder">Please select</option>
+                							<option value="" selected="selected" class="gf_placeholder">Please select...</option>
                 							<option value="Left">Left</option>
                 							<option value="Right">Right</option>
                 							<option value="Both">Both</option>
@@ -105,10 +111,10 @@
                 			</ul>
                 			<hr>
                 			<!-- FOURTH PART OF FORM -->
-                			<ul class="form_fields">
+                			<ul class="form_fields hide">
                 				<!-- DOB -->
                 				<li class="field">
-                					<label class="field_label" for="">What is your/their date of birth?
+                					<label class="field_label" for="">What is your/their date of birth?<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_text">
                 						<input name="" id="" type="text" placeholder="DD/MM/YYYY" aria-required="true" aria-invalid="false">
@@ -120,7 +126,7 @@
                 					</label>
                 					<div class="input_container input_container_select">
                 						<select class="field_select" name="" id="" type="number" aria-required="true" aria-invalid="false">
-                							<option value="" selected="selected" class="gf_placeholder">Please select</option>
+                							<option value="" selected="selected" class="gf_placeholder">Please select...</option>
                 							<option value="USA">USA</option>
                 							<option value="UK">UK</option>
                 							<option value="France">France</option>
@@ -137,6 +143,58 @@
                 					</div>
                 				</li>
                 			</ul>
+                            <hr>
+                            <!-- FIFTH PART OF FORM -->
+                			<ul class="form_fields hide">
+                				<!-- Consent (privacy) checkbox -->
+                				<li class="field">
+                					<div class="input_container input_container_checkbox">
+                                        <input name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
+                                        <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
+                					</div>
+                				</li>
+                				<!-- Email updates -->
+                				<li class="field">
+                					<label class="field_label" for="">Would you like to receive email updates about Open Bionics' cutting edge development and awesome products? We'll treat your personal data with the utmost care and will never sell them to other companies for marketing purposes.<span class="field_required"> *</span>
+                					</label>
+                					<div class="input_container input_container_radio">
+                                        <ul class="field_radio">
+                                            <li>
+                                                <input name="emailupdates" id="yes_emailupdates" value="Yes" type="radio" aria-required="true" aria-invalid="false">
+                                                <label for="yes_emailupdates">Yes</label>
+                                            </li>
+                                            <li>
+                                                <input name="emailupdates" id="no_emailupdates" value="No" type="radio" aria-required="true" aria-invalid="false">
+                                                <label for="no_emailupdates">No</label>
+                                            </li>
+                                        </ul>
+                					</div>
+                                </li>
+                                <!-- Get in touch -->
+                				<li class="field">
+                					<label class="field_label" for="">Do you consent to us getting in touch by phone if we are having difficulties reaching you by email?<span class="field_required"> *</span>
+                					</label>
+                					<div class="input_container input_container_radio">
+                                        <ul class="field_radio">
+                                            <li>
+                                                <input name="getintouch" id="yes_getintouch" value="Yes" type="radio" aria-required="true" aria-invalid="false">
+                                                <label for="yes_getintouch">Yes</label>
+                                            </li>
+                                            <li>
+                                                <input name="getintouch" id="no_getintouch" value="No" type="radio" aria-required="true" aria-invalid="false">
+                                                <label for="no_getintouch">No</label>
+                                            </li>
+                                        </ul>
+                					</div>
+                                </li>
+                                <!-- Consent (clinics) checkbox -->
+                				<li class="field">
+                					<div class="input_container input_container_checkbox">
+                                        <input name="checkbox_consent_clinics" id="checkbox_consent_clinics" type="checkbox" aria-required="true" aria-invalid="false">
+                                        <label class="field_label" for="checkbox_consent_clinics">I consent to the processing of information relating to limb difference and prosthetic clinics.<span class="field_required"> *</span></label>
+                					</div>
+                				</li>
+                			</ul>
                 			<hr>
                 		</div>
                 	</form>
@@ -144,5 +202,4 @@
     		</div>
     	</div>
     </body>
-
 </html>
