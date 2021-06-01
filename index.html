@@ -986,6 +986,30 @@
                 var x = document.forms["register-for-hero"]["country"].value;
                 if (x == "") {
                     document.getElementById("form_fields_five").innerHTML = "";
+                    // Set email attributes to referral value
+                    var emailRefer = document.getElementById("form-one-email");
+                    var emailReferInput = emailRefer.getElementsByTagName("input")[0];
+                    var emailReferInputAttr = emailReferInput.getAttribute("id");
+                    var emailReferInputVal = emailReferInput.value;
+                    console.log(emailRefer, emailReferInput, emailReferInputAttr, emailReferInputVal)
+                    if (emailReferInputAttr = "custentity_ob_referreremail") {
+                        document.getElementById("form_fields_six").innerHTML = `
+                        <li class="field hide" id="form-six-email">
+                            <label class="field_label" for="email">
+                            </label>
+                            <div class="input_container input_container_text">
+                                <input required name="email" id="email" type="text" aria-required="true" aria-invalid="false">
+                            </div>
+                        </li>
+                        `;
+                        var emailUser = document.getElementById("form-six-email");
+                        var emailUserInput = emailRefer.getElementsByTagName("input")[0];
+                        console.log(emailUser);
+                        console.log(emailUserInput);
+                        emailUserInput.setAttribute("value", `"${emailReferInputVal}"`);
+                    } else {
+                        console.log("False")
+                    }
                 } else if (x == "US") {
                     document.getElementById("form_fields_five").innerHTML = `
                     <!-- Default currency as $ -->
@@ -1210,25 +1234,6 @@
                     countryLabel.setAttribute("for", "custentity_ob_referrerstateorcountry");
                     countrySelect.setAttribute("id", "custentity_ob_referrerstateorcountry");
                     countrySelect.setAttribute("name", "custentity_ob_referrerstateorcountry");
-                }
-                // Set email attributes to referral value
-                var email = document.getElementById("form-one-email");
-                var emailInput = email.getElementsByTagName("input")[0];
-                var emailInputAttr = emailInput.getAttribute("id");
-                var emailInputVal = emailInput.value;
-                if (emailInputAttr = "custentity_ob_referreremail") {
-                    document.getElementById("form_fields_six").innerHTML = `
-                    <li class="field hide" id="form-six-email">
-                        <label class="field_label" for="email">
-                        </label>
-                        <div class="input_container input_container_text">
-                            <input required name="email" id="email" type="text" aria-required="true" aria-invalid="false">
-                        </div>
-                    </li>
-                    `;
-                    var emailUser = document.getElementById("form-six-email");
-                    var emailInputUser = email.getElementsByTagName("input")[0];
-                    emailInput.setAttribute("value", `"${emailInputVal}"`);
                 }
             }
 
