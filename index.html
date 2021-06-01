@@ -50,18 +50,30 @@
                 				</li>
                 				<!-- Why are you registering drop down -->
                 				<li class="field">
-                					<label class="field_label" for="custentity_ob_referraltype">Why are you registering?<span class="field_required"> *</span>
+                					<label class="field_label" for="custentity_ob_reasonforsignup">Why are you registering?<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_select">
-                						<select required class="field_select" name="custentity_ob_referraltype" id="custentity_ob_referraltype" type="number" aria-required="true" aria-invalid="false" onchange="formTwo()">
+                						<select required class="field_select" name="custentity_ob_reasonforsignup" id="custentity_ob_reasonforsignup" type="number" aria-required="true" aria-invalid="false" onchange="formTwo()">
                 							<option value="" selected="selected">Please select...</option>
-                							<option value="I have a limb difference">I have a limb difference</option>
-                							<option value="I'm registering for someone with a limb difference">I'm registering for someone with a limb difference</option>
-                							<option value="I have a child with a limb difference">I have a child with a limb difference</option>
-                							<option value="I'm interested in the tech innovation">I'm interested in the tech innovation</option>
+                							<option value="1">I have a limb difference</option>
+                							<option value="2">I'm registering for someone with a limb difference</option>
+                							<option value="3">I have a child with a limb difference</option>
+                							<option value="4">I'm interested in the tech innovation</option>
                 						</select>
                 					</div>
-                				</li>
+                                </li>
+                                <li class="hide">
+                                    <label for="category">Customer category</label>
+                                    <div>
+                                        <input name="category" id="category" value="4" type="text">
+                                    </div>
+                                </li>
+                                <li class="hide">
+                                    <label for="subsidiary">Primary subsidiary</label>
+                                    <div>
+                                        <input name="subsidiary" id="subsidiary" value="1" type="text">
+                                    </div>
+                                </li>
                 			</ul>
                 			<!-- SECOND PART OF FORM -->
                 			<ul class="form_fields" id="form_fields_two">
@@ -83,14 +95,75 @@
         
         <script>
             function formTwo() {
-                var x = document.forms["register-for-hero"]["custentity_ob_referraltype"].value;
+                var x = document.forms["register-for-hero"]["custentity_ob_reasonforsignup"].value;
                 if (x == "") {
                     document.getElementById("form_fields_two").innerHTML = "";
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
-                } else if (x == "I have a child with a limb difference") {
+                } else if (x == "1") {
                     document.getElementById("form_fields_two").innerHTML = `
+                        <!-- Referral type -->
+                        <li class="hide">
+                            <label for="custentity_ob_referraltype">Referral type</label>
+                            <div>
+                                <input name="custentity_ob_referraltype" id="custentity_ob_referraltype" value="1" type="text">
+                            </div>
+                        </li>
+                        <!-- Nature of limb difference drop down -->
+                        <li class="field">
+                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
+                            </label>
+                            <div class="input_container input_container_select">
+                                <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
+                                    <option value="" selected="selected">Please select...</option>
+                                    <option value="1">Below Elbow</option>
+                                    <option value="7">Above Elbow</option>
+                                    <option value="2">Partial Hand</option>
+                                    <option value="3">Unsure</option>
+                                </select>
+                            </div>
+                        </li>
+                    `;
+                    document.getElementById("form_fields_three").innerHTML = "";
+                    document.getElementById("form_fields_four").innerHTML = "";
+                    document.getElementById("form_fields_five").innerHTML = "";
+                } else if (x == "2") {
+                    document.getElementById("form_fields_two").innerHTML = `
+                        <!-- Referral type -->
+                        <li class="hide">
+                            <label for="custentity_ob_referraltype">Referral type</label>
+                            <div>
+                                <input name="custentity_ob_referraltype" id="custentity_ob_referraltype" value="3" type="text">
+                            </div>
+                        </li>
+                        <!-- Nature of limb difference drop down -->
+                        <li class="field">
+                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
+                            </label>
+                            <div class="input_container input_container_select">
+                                <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
+                                    <option value="" selected="selected">Please select...</option>
+                                    <option value="1">Below Elbow</option>
+                                    <option value="7">Above Elbow</option>
+                                    <option value="2">Partial Hand</option>
+                                    <option value="3">Unsure</option>
+                                </select>
+                            </div>
+                        </li>
+                    `;
+                    document.getElementById("form_fields_three").innerHTML = "";
+                    document.getElementById("form_fields_four").innerHTML = "";
+                    document.getElementById("form_fields_five").innerHTML = "";
+                } else if (x == "3") {
+                    document.getElementById("form_fields_two").innerHTML = `
+                        <!-- Referral type -->
+                        <li class="hide">
+                            <label for="custentity_ob_referraltype">Referral type</label>
+                            <div>
+                                <input name="custentity_ob_referraltype" id="custentity_ob_referraltype" value="2" type="text">
+                            </div>
+                        </li>
                         <!-- Child's name -->
                         <li class="field">
                             <label class="field_label" for="custentity_ob_referrerfirstname">What is your child's name?<span class="field_required"> *</span>
@@ -106,10 +179,10 @@
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
                                     <option value="" selected="selected">Please select...</option>
-                                    <option value="Below Elbow">Below Elbow</option>
-                                    <option value="Above Elbow">Above Elbow</option>
-                                    <option value="Partial Hand">Partial Hand</option>
-                                    <option value="Unsure">Unsure</option>
+                                    <option value="1">Below Elbow</option>
+                                    <option value="7">Above Elbow</option>
+                                    <option value="2">Partial Hand</option>
+                                    <option value="3">Unsure</option>
                                 </select>
                             </div>
                         </li>
@@ -117,7 +190,7 @@
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
-                } else if (x == "I'm interested in the tech innovation") {
+                } else if (x == "4") {
                     document.getElementById("form_fields_two").innerHTML = "";
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
@@ -133,26 +206,6 @@
                             <input type="submit" value="Submit">
                         </div>
                     `;
-                } else {
-                    document.getElementById("form_fields_two").innerHTML = `
-                        <!-- Nature of limb difference drop down -->
-                        <li class="field">
-                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of your/their upper limb difference?<span class="field_required"> *</span>
-                            </label>
-                            <div class="input_container input_container_select">
-                                <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
-                                    <option value="" selected="selected">Please select...</option>
-                                    <option value="Below Elbow">Below Elbow</option>
-                                    <option value="Above Elbow">Above Elbow</option>
-                                    <option value="Partial Hand">Partial Hand</option>
-                                    <option value="Unsure">Unsure</option>
-                                </select>
-                            </div>
-                        </li>
-                    `;
-                    document.getElementById("form_fields_three").innerHTML = "";
-                    document.getElementById("form_fields_four").innerHTML = "";
-                    document.getElementById("form_fields_five").innerHTML = "";
                 }
             }
 
@@ -162,7 +215,7 @@
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
-                } else if ((x == "Below Elbow") || (x == "Unsure")) {
+                } else if ((x == "1") || (x == "3")) {
                     document.getElementById("form_fields_three").innerHTML = `
                         <li class="field">
                             <label class="field_label" for="custentity_ob_userchirality">What side is your/their limb difference?<span class="field_required"> *</span>
@@ -170,9 +223,9 @@
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="custentity_ob_userchirality" id="custentity_ob_userchirality" type="number" aria-required="true" aria-invalid="false">
                                     <option value="" selected="selected">Please select...</option>
-                                    <option value="Left">Left</option>
-                                    <option value="Right">Right</option>
-                                    <option value="Both">Both</option>
+                                    <option value="1">Left</option>
+                                    <option value="2">Right</option>
+                                    <option value="3">Both</option>
                                 </select>
                             </div>
                         </li>
@@ -203,10 +256,10 @@
                         </li>
                         <!-- Postcode -->
                         <li class="field">
-                            <label class="field_label" for="zip">Please provide your postcode (USA, UK, France, Germany)
+                            <label class="field_label" for="custentity_ob_referrerzip">Please provide your postcode (USA, UK, France, Germany)
                             </label>
                             <div class="input_container input_container_text">
-                                <input name="zip" id="zip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
+                                <input name="custentity_ob_referrerzip" id="custentity_ob_referrerzip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Country of residence drop down -->
@@ -504,10 +557,10 @@
                         </li>
                         <!-- Postcode -->
                         <li class="field">
-                            <label class="field_label" for="zip">Please provide your postcode (USA, UK, France, Germany)
+                            <label class="field_label" for="custentity_ob_referrerzip">Please provide your postcode (USA, UK, France, Germany)
                             </label>
                             <div class="input_container input_container_text">
-                                <input name="zip" id="zip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
+                                <input name="custentity_ob_referrerzip" id="custentity_ob_referrerzip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Country of residence drop down -->
