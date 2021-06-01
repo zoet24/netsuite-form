@@ -12,12 +12,12 @@
     		<div class="contact-form__content">
     			<h2>Register for a hero arm</h2>
                 <div class="contact-form__form-container">
-        			<form method="POST" name="register-for-hero" action="https://5425059.extforms.netsuite.com/app/site/crm/externalleadpage.nl?compid=5425059&formid=5&h=AAFdikaITc0USB_KPoI4r5JpM-MMqPZF6jdPHIUxP4mdOlsLfa0">
+        			<form method="POST" name="register-for-hero" action="https://5425059.extforms.netsuite.com/app/site/crm/externalleadpage.nl?compid=5425059&formid=5&h=AAFdikaITc0USB_KPoI4r5JpM-MMqPZF6jdPHIUxP4mdOlsLfa0" onsubmit="formatFields()">
                 		<div class="form_body">
                 			<!-- FIRST PART OF FORM -->
                 			<ul class="form_fields" id="form_fields_one">
                 				<!-- First name -->
-                				<li class="field field-short">
+                				<li class="field field-short" id="form-one-firstname">
                 					<label class="field_label" for="firstname">First name<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_text">
@@ -25,7 +25,7 @@
                 					</div>
                 				</li>
                 				<!-- Last name -->
-                				<li class="field field-short">
+                				<li class="field field-short" id="form-one-lastname">
                 					<label class="field_label" for="lastname">Last name<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_text">
@@ -33,7 +33,7 @@
                 					</div>
                 				</li>
                 				<!-- Email -->
-                				<li class="field">
+                				<li class="field" id="form-one-email">
                 					<label class="field_label" for="email">Email<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_text">
@@ -41,7 +41,7 @@
                 					</div>
                 				</li>
                 				<!-- Phone number -->
-                				<li class="field">
+                				<li class="field" id="form-one-phone">
                 					<label class="field_label" for="phone">Phone number<span class="field_required"> *</span>
                 					</label>
                 					<div class="input_container input_container_number">
@@ -62,16 +62,25 @@
                 						</select>
                 					</div>
                                 </li>
+                                <!-- Set customer category to user -->
                                 <li class="hide">
                                     <label for="category">Customer category</label>
                                     <div>
                                         <input name="category" id="category" value="4" type="text">
                                     </div>
                                 </li>
+                                <!-- Set primary subsidiary to Open Bionics Ltd -->
                                 <li class="hide">
                                     <label for="subsidiary">Primary subsidiary</label>
                                     <div>
                                         <input name="subsidiary" id="subsidiary" value="1" type="text">
+                                    </div>
+                                </li>
+                                <!-- Set lead origin to OB Web Signup -->
+                                <li class="hide">
+                                    <label for="custentity_ob_leadorigin">Lead origin field</label>
+                                    <div>
+                                        <input name="custentity_ob_leadorigin" id="custentity_ob_leadorigin" value="2" type="text">
                                     </div>
                                 </li>
                 			</ul>
@@ -97,13 +106,71 @@
             function formTwo() {
                 var x = document.forms["register-for-hero"]["custentity_ob_reasonforsignup"].value;
                 if (x == "") {
+                    // Set first name attributes to referral
+                    var firstName = document.getElementById("form-one-firstname");
+                    var firstNameLabel = firstName.getElementsByTagName("label")[0];
+                    var firstNameInput = firstName.getElementsByTagName("input")[0];
+                    firstNameLabel.setAttribute("for", "firstname");
+                    firstNameInput.setAttribute("id", "firstname");
+                    firstNameInput.setAttribute("name", "firstname");
+                    // Set last name attributes to referral
+                    var lastName = document.getElementById("form-one-lastname");
+                    var lastNameLabel = lastName.getElementsByTagName("label")[0];
+                    var lastNameInput = lastName.getElementsByTagName("input")[0];
+                    lastNameLabel.setAttribute("for", "lastname");
+                    lastNameInput.setAttribute("id", "lastname");
+                    lastNameInput.setAttribute("name", "lastname");
+                    // Set email attributes to referral
+                    var email = document.getElementById("form-one-email");
+                    var emailLabel = email.getElementsByTagName("label")[0];
+                    var emailInput = email.getElementsByTagName("input")[0];
+                    emailLabel.setAttribute("for", "email");
+                    emailInput.setAttribute("id", "email");
+                    emailInput.setAttribute("name", "email");
+                    // Set phone attributes to referral
+                    var phone = document.getElementById("form-one-phone");
+                    var phoneLabel = phone.getElementsByTagName("label")[0];
+                    var phoneInput = phone.getElementsByTagName("input")[0];
+                    phoneLabel.setAttribute("for", "phone");
+                    phoneInput.setAttribute("id", "phone");
+                    phoneInput.setAttribute("name", "phone");
+                    // Set HTML
                     document.getElementById("form_fields_two").innerHTML = "";
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
                 } else if (x == "1") {
+                    // Set first name attributes to referral
+                    var firstName = document.getElementById("form-one-firstname");
+                    var firstNameLabel = firstName.getElementsByTagName("label")[0];
+                    var firstNameInput = firstName.getElementsByTagName("input")[0];
+                    firstNameLabel.setAttribute("for", "firstname");
+                    firstNameInput.setAttribute("id", "firstname");
+                    firstNameInput.setAttribute("name", "firstname");
+                    // Set last name attributes to referral
+                    var lastName = document.getElementById("form-one-lastname");
+                    var lastNameLabel = lastName.getElementsByTagName("label")[0];
+                    var lastNameInput = lastName.getElementsByTagName("input")[0];
+                    lastNameLabel.setAttribute("for", "lastname");
+                    lastNameInput.setAttribute("id", "lastname");
+                    lastNameInput.setAttribute("name", "lastname");
+                    // Set email attributes to referral
+                    var email = document.getElementById("form-one-email");
+                    var emailLabel = email.getElementsByTagName("label")[0];
+                    var emailInput = email.getElementsByTagName("input")[0];
+                    emailLabel.setAttribute("for", "email");
+                    emailInput.setAttribute("id", "email");
+                    emailInput.setAttribute("name", "email");
+                    // Set phone attributes to referral
+                    var phone = document.getElementById("form-one-phone");
+                    var phoneLabel = phone.getElementsByTagName("label")[0];
+                    var phoneInput = phone.getElementsByTagName("input")[0];
+                    phoneLabel.setAttribute("for", "phone");
+                    phoneInput.setAttribute("id", "phone");
+                    phoneInput.setAttribute("name", "phone");
+                    // Set HTML
                     document.getElementById("form_fields_two").innerHTML = `
-                        <!-- Referral type -->
+                        <!-- Referral type - if reason for register is "I have a limb difference" set to "User direct" -->
                         <li class="hide">
                             <label for="custentity_ob_referraltype">Referral type</label>
                             <div>
@@ -129,12 +196,56 @@
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
                 } else if (x == "2") {
+                    // Set first name attributes to referral
+                    var firstName = document.getElementById("form-one-firstname");
+                    var firstNameLabel = firstName.getElementsByTagName("label")[0];
+                    var firstNameInput = firstName.getElementsByTagName("input")[0];
+                    firstNameLabel.setAttribute("for", "custentity_ob_referrerfirstname");
+                    firstNameInput.setAttribute("id", "custentity_ob_referrerfirstname");
+                    firstNameInput.setAttribute("name", "custentity_ob_referrerfirstname");
+                    // Set last name attributes to referral
+                    var lastName = document.getElementById("form-one-lastname");
+                    var lastNameLabel = lastName.getElementsByTagName("label")[0];
+                    var lastNameInput = lastName.getElementsByTagName("input")[0];
+                    lastNameLabel.setAttribute("for", "custentity_ob_referrerlastname");
+                    lastNameInput.setAttribute("id", "custentity_ob_referrerlastname");
+                    lastNameInput.setAttribute("name", "custentity_ob_referrerlastname");
+                    // Set email attributes to referral
+                    var email = document.getElementById("form-one-email");
+                    var emailLabel = email.getElementsByTagName("label")[0];
+                    var emailInput = email.getElementsByTagName("input")[0];
+                    emailLabel.setAttribute("for", "custentity_ob_referreremail");
+                    emailInput.setAttribute("id", "custentity_ob_referreremail");
+                    emailInput.setAttribute("name", "custentity_ob_referreremail");
+                    // Set phone attributes to referral
+                    var phone = document.getElementById("form-one-phone");
+                    var phoneLabel = phone.getElementsByTagName("label")[0];
+                    var phoneInput = phone.getElementsByTagName("input")[0];
+                    phoneLabel.setAttribute("for", "custentity_ob_referrerphone");
+                    phoneInput.setAttribute("id", "custentity_ob_referrerphone");
+                    phoneInput.setAttribute("name", "custentity_ob_referrerphone");
+                    // Set HTML
                     document.getElementById("form_fields_two").innerHTML = `
-                        <!-- Referral type -->
+                        <!-- Referral type - if reason for register is "I am registering for someone" set to "User friend" -->
                         <li class="hide">
                             <label for="custentity_ob_referraltype">Referral type</label>
                             <div>
                                 <input name="custentity_ob_referraltype" id="custentity_ob_referraltype" value="3" type="text">
+                            </div>
+                        </li>
+                        <!-- Friend's name -->
+                        <li class="field field-short">
+                            <label class="field_label" for="firstname">What is their first name?<span class="field_required"> *</span>
+                            </label>
+                            <div class="input_container input_container_text">
+                                <input required name="firstname" id="firstname" type="text" aria-required="true" aria-invalid="false">
+                            </div>
+                        </li>
+                        <li class="field field-short">
+                            <label class="field_label" for="lastname">What is their last name?<span class="field_required"> *</span>
+                            </label>
+                            <div class="input_container input_container_text">
+                                <input required name="lastname" id="lastname" type="text" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Nature of limb difference drop down -->
@@ -156,8 +267,37 @@
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
                 } else if (x == "3") {
+                    // Set first name attributes to referral
+                    var firstName = document.getElementById("form-one-firstname");
+                    var firstNameLabel = firstName.getElementsByTagName("label")[0];
+                    var firstNameInput = firstName.getElementsByTagName("input")[0];
+                    firstNameLabel.setAttribute("for", "custentity_ob_referrerfirstname");
+                    firstNameInput.setAttribute("id", "custentity_ob_referrerfirstname");
+                    firstNameInput.setAttribute("name", "custentity_ob_referrerfirstname");
+                    // Set last name attributes to referral
+                    var lastName = document.getElementById("form-one-lastname");
+                    var lastNameLabel = lastName.getElementsByTagName("label")[0];
+                    var lastNameInput = lastName.getElementsByTagName("input")[0];
+                    lastNameLabel.setAttribute("for", "custentity_ob_referrerlastname");
+                    lastNameInput.setAttribute("id", "custentity_ob_referrerlastname");
+                    lastNameInput.setAttribute("name", "custentity_ob_referrerlastname");
+                    // Set email attributes to referral
+                    var email = document.getElementById("form-one-email");
+                    var emailLabel = email.getElementsByTagName("label")[0];
+                    var emailInput = email.getElementsByTagName("input")[0];
+                    emailLabel.setAttribute("for", "custentity_ob_referreremail");
+                    emailInput.setAttribute("id", "custentity_ob_referreremail");
+                    emailInput.setAttribute("name", "custentity_ob_referreremail");
+                    // Set phone attributes to referral
+                    var phone = document.getElementById("form-one-phone");
+                    var phoneLabel = phone.getElementsByTagName("label")[0];
+                    var phoneInput = phone.getElementsByTagName("input")[0];
+                    phoneLabel.setAttribute("for", "custentity_ob_referrerphone");
+                    phoneInput.setAttribute("id", "custentity_ob_referrerphone");
+                    phoneInput.setAttribute("name", "custentity_ob_referrerphone");
+                    // Set HTML
                     document.getElementById("form_fields_two").innerHTML = `
-                        <!-- Referral type -->
+                        <!-- Referral type - if reason for register is "I have a child with a limb difference" set to "User parent" -->
                         <li class="hide">
                             <label for="custentity_ob_referraltype">Referral type</label>
                             <div>
@@ -165,11 +305,18 @@
                             </div>
                         </li>
                         <!-- Child's name -->
-                        <li class="field">
-                            <label class="field_label" for="custentity_ob_referrerfirstname">What is your child's name?<span class="field_required"> *</span>
+                        <li class="field field-short">
+                            <label class="field_label" for="firstname">What is your child's first name?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
-                                <input required name="custentity_ob_referrerfirstname" id="custentity_ob_referrerfirstname" type="text" aria-required="true" aria-invalid="false">
+                                <input required name="firstname" id="firstname" type="text" aria-required="true" aria-invalid="false">
+                            </div>
+                        </li>
+                        <li class="field field-short">
+                            <label class="field_label" for="lastname">What is your child's last name?<span class="field_required"> *</span>
+                            </label>
+                            <div class="input_container input_container_text">
+                                <input required name="lastname" id="lastname" type="text" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Nature of limb difference drop down -->
@@ -255,16 +402,16 @@
                             </div>
                         </li>
                         <!-- Postcode -->
-                        <li class="field">
-                            <label class="field_label" for="custentity_ob_referrerzip">Please provide your postcode (USA, UK, France, Germany)
+                        <li class="field" id="form-four-zip">
+                            <label class="field_label" for="zip">Please provide your/their postcode (USA, UK, France, Germany)
                             </label>
                             <div class="input_container input_container_text">
-                                <input name="custentity_ob_referrerzip" id="custentity_ob_referrerzip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
+                                <input name="zip" id="zip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Country of residence drop down -->
-                        <li class="field">
-                            <label class="field_label" for="country">What's your country of residence?<span class="field_required"> *</span>
+                        <li class="field" id="form-four-country">
+                            <label class="field_label" for="country">What's your/their country of residence?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="country" id="country" aria-required="true" aria-invalid="false" onchange="formFour()">
@@ -556,16 +703,16 @@
                             </div>
                         </li>
                         <!-- Postcode -->
-                        <li class="field">
-                            <label class="field_label" for="custentity_ob_referrerzip">Please provide your postcode (USA, UK, France, Germany)
+                        <li class="field" id="form-four-zip">
+                            <label class="field_label" for="zip">Please provide your/their postcode (USA, UK, France, Germany)
                             </label>
                             <div class="input_container input_container_text">
-                                <input name="custentity_ob_referrerzip" id="custentity_ob_referrerzip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
+                                <input name="zip" id="zip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
                             </div>
                         </li>
                         <!-- Country of residence drop down -->
-                        <li class="field">
-                            <label class="field_label" for="country">What's your country of residence?<span class="field_required"> *</span>
+                        <li class="field" id="form-four-country">
+                            <label class="field_label" for="country">What's your/their country of residence?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="country" id="country" aria-required="true" aria-invalid="false" onchange="formFour()">
@@ -836,8 +983,15 @@
                 var x = document.forms["register-for-hero"]["country"].value;
                 if (x == "") {
                     document.getElementById("form_fields_five").innerHTML = "";
-                } else {
+                } else if (x == "US") {
                     document.getElementById("form_fields_five").innerHTML = `
+                    <!-- Default currency as $ -->
+                    <li class="hide">
+                        <label for="currency">Default currency</label>
+                        <div>
+                            <input name="currency" id="currency" value="2" type="text">
+                        </div>
+                    </li>
                     <!-- Consent (privacy) checkbox -->
                     <li class="field">
                         <div class="input_container input_container_checkbox border-none">
@@ -890,6 +1044,87 @@
                         <input type="submit" value="Submit">
                     </div>
                     `;
+                } else {
+                    document.getElementById("form_fields_five").innerHTML = `
+                    <!-- Default currency as £ -->
+                    <li class="hide">
+                        <label for="currency">Default currency</label>
+                        <div>
+                            <input name="currency" id="currency" value="1" type="text">
+                        </div>
+                    </li>
+                    <!-- Consent (privacy) checkbox -->
+                    <li class="field">
+                        <div class="input_container input_container_checkbox border-none">
+                            <input required name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
+                            <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
+                        </div>
+                    </li>
+                    <!-- Email updates -->
+                    <!-- <li class="field">
+                        <label class="field_label" for="">Would you like to receive email updates about Open Bionics' cutting edge development and awesome products? We'll treat your personal data with the utmost care and will never sell them to other companies for marketing purposes.<span class="field_required"> *</span>
+                        </label>
+                        <div class="input_container input_container_radio border-none">
+                            <ul class="field_radio">
+                                <li>
+                                    <input required name="emailupdates" id="yes_emailupdates" value="Yes" type="radio" aria-required="true" aria-invalid="false">
+                                    <label for="yes_emailupdates">Yes</label>
+                                </li>
+                                <li>
+                                    <input required name="emailupdates" id="no_emailupdates" value="No" type="radio" aria-required="true" aria-invalid="false">
+                                    <label for="no_emailupdates">No</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    <!-- Get in touch -->
+                    <!-- <li class="field margin-none">
+                        <label class="field_label" for="">Do you consent to us getting in touch by phone if we are having difficulties reaching you by email?<span class="field_required"> *</span>
+                        </label>
+                        <div class="input_container input_container_radio border-none">
+                            <ul class="field_radio">
+                                <li>
+                                    <input required name="getintouch" id="yes_getintouch" value="Yes" type="radio" aria-required="true" aria-invalid="false">
+                                    <label for="yes_getintouch">Yes</label>
+                                </li>
+                                <li>
+                                    <input required name="getintouch" id="no_getintouch" value="No" type="radio" aria-required="true" aria-invalid="false">
+                                    <label for="no_getintouch">No</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    <!-- Consent (clinics) checkbox -->
+                    <li class="field">
+                        <div class="input_container input_container_checkbox border-none margin-none">
+                            <input required name="checkbox_consent_clinics" id="checkbox_consent_clinics" type="checkbox" aria-required="true" aria-invalid="false">
+                            <label class="field_label" for="checkbox_consent_clinics">I consent to the processing of information relating to limb difference and prosthetic clinics.<span class="field_required"> *</span></label>
+                        </div>
+                    </li>
+                    <div class="input_container input_container_submit border-none margin-topandbottom">
+                        <input type="submit" value="Submit">
+                    </div>
+                    `;
+                }
+            }
+
+            function formatFields() {
+                var x = document.forms["register-for-hero"]["custentity_ob_reasonforsignup"].value;
+                if ((x == "2") || (x == "3")) {
+                    // Set zip attributes to referral
+                    var zip = document.getElementById("form-four-zip");
+                    var zipLabel = zip.getElementsByTagName("label")[0];
+                    var zipInput = zip.getElementsByTagName("input")[0];
+                    zipLabel.setAttribute("for", "custentity_ob_referrerzip");
+                    zipInput.setAttribute("id", "custentity_ob_referrerzip");
+                    zipInput.setAttribute("name", "custentity_ob_referrerzip");
+                    // Set country attributes to referral
+                    var country = document.getElementById("form-four-country");
+                    var countryLabel = country.getElementsByTagName("label")[0];
+                    var countrySelect = country.getElementsByTagName("select")[0];
+                    countryLabel.setAttribute("for", "custentity_ob_referrerstateorcountry");
+                    countrySelect.setAttribute("id", "custentity_ob_referrerstateorcountry");
+                    countrySelect.setAttribute("name", "custentity_ob_referrerstateorcountry");
                 }
             }
 
