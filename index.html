@@ -95,6 +95,9 @@
                 			</ul>
                             <!-- FIFTH PART OF FORM -->
                 			<ul class="form_fields" id="form_fields_five">
+                            </ul>
+                            <!-- SIXTH PART OF FORM -->
+                			<ul class="form_fields hide" id="form_fields_six">
                 			</ul>
                 		</div>
                 	</form>
@@ -992,6 +995,81 @@
                             <input name="currency" id="currency" value="2" type="text">
                         </div>
                     </li>
+                    <!-- Region of sale as USA -->
+                    <li class="hide">
+                        <label for="custentity_ob_regionofsale">Region of sale</label>
+                        <div>
+                            <input name="custentity_ob_regionofsale" id="custentity_ob_regionofsale" value="2" type="text">
+                        </div>
+                    </li>
+                    <!-- Consent (privacy) checkbox -->
+                    <li class="field">
+                        <div class="input_container input_container_checkbox border-none">
+                            <input required name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
+                            <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
+                        </div>
+                    </li>
+                    <!-- Email updates -->
+                    <!-- <li class="field">
+                        <label class="field_label" for="">Would you like to receive email updates about Open Bionics' cutting edge development and awesome products? We'll treat your personal data with the utmost care and will never sell them to other companies for marketing purposes.<span class="field_required"> *</span>
+                        </label>
+                        <div class="input_container input_container_radio border-none">
+                            <ul class="field_radio">
+                                <li>
+                                    <input required name="emailupdates" id="yes_emailupdates" value="Yes" type="radio" aria-required="true" aria-invalid="false">
+                                    <label for="yes_emailupdates">Yes</label>
+                                </li>
+                                <li>
+                                    <input required name="emailupdates" id="no_emailupdates" value="No" type="radio" aria-required="true" aria-invalid="false">
+                                    <label for="no_emailupdates">No</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    <!-- Get in touch -->
+                    <!-- <li class="field margin-none">
+                        <label class="field_label" for="">Do you consent to us getting in touch by phone if we are having difficulties reaching you by email?<span class="field_required"> *</span>
+                        </label>
+                        <div class="input_container input_container_radio border-none">
+                            <ul class="field_radio">
+                                <li>
+                                    <input required name="getintouch" id="yes_getintouch" value="Yes" type="radio" aria-required="true" aria-invalid="false">
+                                    <label for="yes_getintouch">Yes</label>
+                                </li>
+                                <li>
+                                    <input required name="getintouch" id="no_getintouch" value="No" type="radio" aria-required="true" aria-invalid="false">
+                                    <label for="no_getintouch">No</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    <!-- Consent (clinics) checkbox -->
+                    <li class="field">
+                        <div class="input_container input_container_checkbox border-none margin-none">
+                            <input required name="checkbox_consent_clinics" id="checkbox_consent_clinics" type="checkbox" aria-required="true" aria-invalid="false">
+                            <label class="field_label" for="checkbox_consent_clinics">I consent to the processing of information relating to limb difference and prosthetic clinics.<span class="field_required"> *</span></label>
+                        </div>
+                    </li>
+                    <div class="input_container input_container_submit border-none margin-topandbottom">
+                        <input type="submit" value="Submit">
+                    </div>
+                    `;
+                } else if (x == "GB") {
+                    document.getElementById("form_fields_five").innerHTML = `
+                    <!-- Default currency as $ -->
+                    <li class="hide">
+                        <label for="currency">Default currency</label>
+                        <div>
+                            <input name="currency" id="currency" value="2" type="text">
+                        </div>
+                    </li>
+                    <!-- Region of sale as UK -->
+                    <li class="hide">
+                        <label for="custentity_ob_regionofsale">Region of sale</label>
+                        <div>
+                            <input name="custentity_ob_regionofsale" id="custentity_ob_regionofsale" value="1" type="text">
+                        </div>
+                    </li>
                     <!-- Consent (privacy) checkbox -->
                     <li class="field">
                         <div class="input_container input_container_checkbox border-none">
@@ -1051,6 +1129,13 @@
                         <label for="currency">Default currency</label>
                         <div>
                             <input name="currency" id="currency" value="1" type="text">
+                        </div>
+                    </li>
+                    <!-- Region of sale as rest of world -->
+                    <li class="hide">
+                        <label for="custentity_ob_regionofsale">Region of sale</label>
+                        <div>
+                            <input name="custentity_ob_regionofsale" id="custentity_ob_regionofsale" value="7" type="text">
                         </div>
                     </li>
                     <!-- Consent (privacy) checkbox -->
@@ -1125,6 +1210,25 @@
                     countryLabel.setAttribute("for", "custentity_ob_referrerstateorcountry");
                     countrySelect.setAttribute("id", "custentity_ob_referrerstateorcountry");
                     countrySelect.setAttribute("name", "custentity_ob_referrerstateorcountry");
+                }
+                // Set email attributes to referral value
+                var email = document.getElementById("form-one-email");
+                var emailInput = email.getElementsByTagName("input")[0];
+                var emailInputAttr = emailInput.getAttribute("id");
+                var emailInputVal = emailInput.value;
+                if (emailInputAttr = "custentity_ob_referreremail") {
+                    document.getElementById("form_fields_six").innerHTML = `
+                    <li class="field hide" id="form-six-email">
+                        <label class="field_label" for="email">
+                        </label>
+                        <div class="input_container input_container_text">
+                            <input required name="email" id="email" type="text" aria-required="true" aria-invalid="false">
+                        </div>
+                    </li>
+                    `;
+                    var emailUser = document.getElementById("form-six-email");
+                    var emailInputUser = email.getElementsByTagName("input")[0];
+                    emailInput.setAttribute("value", `"${emailInputVal}"`);
                 }
             }
 
