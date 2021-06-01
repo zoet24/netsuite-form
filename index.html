@@ -86,6 +86,8 @@
                 var x = document.forms["register-for-hero"]["custentity_ob_referraltype"].value;
                 if (x == "") {
                     document.getElementById("form_fields_two").innerHTML = "";
+                    document.getElementById("form_fields_three").innerHTML = "";
+                    document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
                 } else if (x == "I have a child with a limb difference") {
                     document.getElementById("form_fields_two").innerHTML = `
@@ -112,18 +114,22 @@
                             </div>
                         </li>
                     `;
+                    document.getElementById("form_fields_three").innerHTML = "";
+                    document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
                 } else if (x == "I'm interested in the tech innovation") {
                     document.getElementById("form_fields_two").innerHTML = "";
+                    document.getElementById("form_fields_three").innerHTML = "";
+                    document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = `
                         <!-- Consent (privacy) checkbox -->
                         <li class="field">
-                            <div class="input_container input_container_checkbox border-none margin-bottom">
+                            <div class="input_container input_container_checkbox border-none">
                                 <input required name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
                                 <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
                             </div>
                         </li>
-                        <div class="input_container input_container_submit border-none margin-bottom">
+                        <div class="input_container input_container_submit border-none margin-topandbottom">
                             <input type="submit" value="Submit">
                         </div>
                     `;
@@ -144,6 +150,8 @@
                             </div>
                         </li>
                     `;
+                    document.getElementById("form_fields_three").innerHTML = "";
+                    document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
                 }
             }
@@ -153,6 +161,7 @@
                 if (x == "") {
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
+                    document.getElementById("form_fields_five").innerHTML = "";
                 } else if ((x == "Below Elbow") || (x == "Unsure")) {
                     document.getElementById("form_fields_three").innerHTML = `
                         <li class="field">
@@ -465,6 +474,7 @@
                             </div>
                         </li>
                     `;
+                    document.getElementById("form_fields_five").innerHTML = "";
                 } else {
                     document.getElementById("form_fields_three").innerHTML = `
                         <li class="field">
@@ -765,6 +775,7 @@
                             </div>
                         </li>
                     `;
+                    document.getElementById("form_fields_five").innerHTML = "";
                 }
             }
         
@@ -776,7 +787,7 @@
                     document.getElementById("form_fields_five").innerHTML = `
                     <!-- Consent (privacy) checkbox -->
                     <li class="field">
-                        <div class="input_container input_container_checkbox border-none margin-bottom">
+                        <div class="input_container input_container_checkbox border-none">
                             <input required name="checkbox_consent_privacy" id="checkbox_consent_privacy" type="checkbox" aria-required="true" aria-invalid="false">
                             <label class="field_label" for="checkbox_consent_privacy">I agree to Open Bionics' terms and conditions and privacy policy.<span class="field_required"> *</span></label>
                         </div>
@@ -817,7 +828,7 @@
                     </li> -->
                     <!-- Consent (clinics) checkbox -->
                     <li class="field">
-                        <div class="input_container input_container_checkbox border-none margin-bottom">
+                        <div class="input_container input_container_checkbox border-none margin-none">
                             <input required name="checkbox_consent_clinics" id="checkbox_consent_clinics" type="checkbox" aria-required="true" aria-invalid="false">
                             <label class="field_label" for="checkbox_consent_clinics">I consent to the processing of information relating to limb difference and prosthetic clinics.<span class="field_required"> *</span></label>
                         </div>
