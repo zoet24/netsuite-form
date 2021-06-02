@@ -54,7 +54,7 @@
                 					</label>
                 					<div class="input_container input_container_select">
                 						<select required class="field_select" name="custentity_ob_reasonforsignup" id="custentity_ob_reasonforsignup" aria-required="true" aria-invalid="false" onchange="formTwo()">
-                							<option value="" id="custentity_ob_reasonforsignup_a">Please select...</option>
+                							<option value="" id="custentity_ob_reasonforsignup_a" selected="selected">Please select...</option>
                 							<option value="1" id="custentity_ob_reasonforsignup_b">I have a limb difference</option>
                 							<option value="2" id="custentity_ob_reasonforsignup_c">I'm registering for someone with a limb difference</option>
                 							<option value="3" id="custentity_ob_reasonforsignup_d">I have a child with a limb difference</option>
@@ -106,23 +106,11 @@
         </div>
         
         <script>
-            function formatPronouns() {
-                var x = document.forms["register-for-hero"]["custentity_ob_reasonforsignup"].value;
-                if (x == "1") {
-                    document.body.innerHTML = document.body.innerHTML.replace(/your their/g, 'your');
-                } else if ((x == "2") || (x == "3")) {
-                    document.body.innerHTML = document.body.innerHTML.replace(/your their/g, 'their');
-                }
-            }
+            let pronoun = "your/their";
 
             function formTwo() {
                 var x = document.forms["register-for-hero"]["custentity_ob_reasonforsignup"].value;
                 if (x == "") {
-                    document.getElementById("custentity_ob_reasonforsignup_a").setAttribute("selected", "selected");
-                    document.getElementById("custentity_ob_reasonforsignup_b").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_c").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_d").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_e").removeAttribute("selected");
                     // Set first name attributes to referral
                     var firstName = document.getElementById("form-one-firstname");
                     var firstNameLabel = firstName.getElementsByTagName("label")[0];
@@ -157,11 +145,7 @@
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
                 } else if (x == "1") {
-                    document.getElementById("custentity_ob_reasonforsignup_b").setAttribute("selected", "selected");
-                    document.getElementById("custentity_ob_reasonforsignup_a").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_c").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_d").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_e").removeAttribute("selected");
+                    pronoun = "your";
                     // Set first name attributes to referral
                     var firstName = document.getElementById("form-one-firstname");
                     var firstNameLabel = firstName.getElementsByTagName("label")[0];
@@ -201,7 +185,7 @@
                         </li>
                         <!-- Nature of limb difference drop down -->
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of your their upper limb difference?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of ${pronoun} upper limb difference?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
@@ -217,13 +201,8 @@
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
-                    formatPronouns();
                 } else if (x == "2") {
-                    document.getElementById("custentity_ob_reasonforsignup_c").setAttribute("selected", "selected");
-                    document.getElementById("custentity_ob_reasonforsignup_b").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_a").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_d").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_e").removeAttribute("selected");
+                    pronoun = "their";
                     // Set first name attributes to referral
                     var firstName = document.getElementById("form-one-firstname");
                     var firstNameLabel = firstName.getElementsByTagName("label")[0];
@@ -278,7 +257,7 @@
                         </li>
                         <!-- Nature of limb difference drop down -->
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of your their upper limb difference?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of ${pronoun} upper limb difference?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
@@ -294,13 +273,8 @@
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
-                    formatPronouns();
                 } else if (x == "3") {
-                    document.getElementById("custentity_ob_reasonforsignup_d").setAttribute("selected", "selected");
-                    document.getElementById("custentity_ob_reasonforsignup_b").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_c").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_a").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_e").removeAttribute("selected");
+                    pronoun = "their";
                     // Set first name attributes to referral
                     var firstName = document.getElementById("form-one-firstname");
                     var firstNameLabel = firstName.getElementsByTagName("label")[0];
@@ -355,7 +329,7 @@
                         </li>
                         <!-- Nature of limb difference drop down -->
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of your their upper limb difference?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userlimbdifference">What is the nature of ${pronoun} upper limb difference?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="custentity_ob_userlimbdifference" id="custentity_ob_userlimbdifference" type="number" aria-required="true" aria-invalid="false" onchange="formThree()">
@@ -371,13 +345,7 @@
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
-                    formatPronouns();
                 } else if (x == "4") {
-                    document.getElementById("custentity_ob_reasonforsignup_e").setAttribute("selected", "selected");
-                    document.getElementById("custentity_ob_reasonforsignup_b").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_c").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_d").removeAttribute("selected");
-                    document.getElementById("custentity_ob_reasonforsignup_a").removeAttribute("selected");
                     document.getElementById("form_fields_two").innerHTML = "";
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
@@ -402,11 +370,10 @@
                     document.getElementById("form_fields_three").innerHTML = "";
                     document.getElementById("form_fields_four").innerHTML = "";
                     document.getElementById("form_fields_five").innerHTML = "";
-                    formatPronouns();
                 } else if ((x == "1") || (x == "3")) {
                     document.getElementById("form_fields_three").innerHTML = `
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userchirality">What side is your their limb difference?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userchirality">What side is ${pronoun} limb difference?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="custentity_ob_userchirality" id="custentity_ob_userchirality" type="number" aria-required="true" aria-invalid="false">
@@ -419,7 +386,7 @@
                         </li>
                         <!-- Distance of residual limb -->
                         <li class="field">
-                            <label class="field_label" for="custentity_ob_userresiduallengthfreetext">What is the distance between your their elbow crease and end of your their residual limb?<span class="field_required"> *</span>
+                            <label class="field_label" for="custentity_ob_userresiduallengthfreetext">What is the distance between ${pronoun} elbow crease and end of ${pronoun} residual limb?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
                                 <input required name="custentity_ob_userresiduallengthfreetext" id="custentity_ob_userresiduallengthfreetext" type="text" placeholder="(mm)" aria-required="true" aria-invalid="false">
@@ -429,7 +396,7 @@
                     document.getElementById("form_fields_four").innerHTML = `
                         <!-- DOB -->
                         <li class="field">
-                            <label class="field_label" for="datepicker">What is your their date of birth?<span class="field_required"> *</span>
+                            <label class="field_label" for="datepicker">What is ${pronoun} date of birth?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
                                 <input required name="datepicker" id="datepicker" type="date" aria-required="true" aria-invalid="false" onchange="formatDate()">
@@ -444,7 +411,7 @@
                         </li>
                         <!-- Postcode -->
                         <li class="field" id="form-four-zip">
-                            <label class="field_label" for="zip">Please provide your their postcode (USA, UK, France, Germany)
+                            <label class="field_label" for="zip">Please provide ${pronoun} postcode (USA, UK, France, Germany)
                             </label>
                             <div class="input_container input_container_text">
                                 <input name="zip" id="zip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
@@ -452,11 +419,11 @@
                         </li>
                         <!-- Country of residence drop down -->
                         <li class="field" id="form-four-country">
-                            <label class="field_label" for="country">What's your their country of residence?<span class="field_required"> *</span>
+                            <label class="field_label" for="country">What's ${pronoun} country of residence?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="country" id="country" aria-required="true" aria-invalid="false" onchange="formFour()">
-                                    <option value='' selected>Please select...</option>
+                                    <option value='' selected="selected">Please select...</option>
                                     <option value='US'>United States</option>
                                     <option value='AF'>Afghanistan</option>
                                     <option value='AX'>Aland Islands</option>
@@ -716,7 +683,6 @@
                         </li>
                     `;
                     document.getElementById("form_fields_five").innerHTML = "";
-                    formatPronouns();
                 } else {
                     document.getElementById("form_fields_three").innerHTML = `
                         <li class="field">
@@ -731,7 +697,7 @@
                     document.getElementById("form_fields_four").innerHTML = `
                         <!-- DOB -->
                         <li class="field">
-                            <label class="field_label" for="datepicker">What is your their date of birth?<span class="field_required"> *</span>
+                            <label class="field_label" for="datepicker">What is ${pronoun} date of birth?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_text">
                                 <input required name="datepicker" id="datepicker" type="date" aria-required="true" aria-invalid="false" onchange="formatDate()">
@@ -746,7 +712,7 @@
                         </li>
                         <!-- Postcode -->
                         <li class="field" id="form-four-zip">
-                            <label class="field_label" for="zip">Please provide your their postcode (USA, UK, France, Germany)
+                            <label class="field_label" for="zip">Please provide ${pronoun} postcode (USA, UK, France, Germany)
                             </label>
                             <div class="input_container input_container_text">
                                 <input name="zip" id="zip" type="text" placeholder="Postcode" aria-required="true" aria-invalid="false">
@@ -754,11 +720,11 @@
                         </li>
                         <!-- Country of residence drop down -->
                         <li class="field" id="form-four-country">
-                            <label class="field_label" for="country">What's your their country of residence?<span class="field_required"> *</span>
+                            <label class="field_label" for="country">What's ${pronoun} country of residence?<span class="field_required"> *</span>
                             </label>
                             <div class="input_container input_container_select">
                                 <select required class="field_select" name="country" id="country" aria-required="true" aria-invalid="false" onchange="formFour()">
-                                    <option value='' selected>Please select...</option>
+                                    <option value='' selected="selected">Please select...</option>
                                     <option value='US'>United States</option>
                                     <option value='AF'>Afghanistan</option>
                                     <option value='AX'>Aland Islands</option>
@@ -1018,7 +984,6 @@
                         </li>
                     `;
                     document.getElementById("form_fields_five").innerHTML = "";
-                    formatPronouns();
                 }
             }
         
@@ -1026,7 +991,6 @@
                 var x = document.forms["register-for-hero"]["country"].value;
                 if (x == "") {
                     document.getElementById("form_fields_five").innerHTML = "";
-                    formatPronouns();
                 } else if (x == "US") {
                     document.getElementById("form_fields_five").innerHTML = `
                     <!-- Default currency as $ -->
@@ -1095,7 +1059,6 @@
                         <input type="submit" value="Submit">
                     </div>
                     `;
-                    formatPronouns();
                 } else if (x == "GB") {
                     document.getElementById("form_fields_five").innerHTML = `
                     <!-- Default currency as $ -->
@@ -1164,7 +1127,6 @@
                         <input type="submit" value="Submit">
                     </div>
                     `;
-                    formatPronouns();
                 } else {
                     document.getElementById("form_fields_five").innerHTML = `
                     <!-- Default currency as £ -->
@@ -1233,7 +1195,6 @@
                         <input type="submit" value="Submit">
                     </div>
                     `;
-                    formatPronouns();
                 }
             }
 
